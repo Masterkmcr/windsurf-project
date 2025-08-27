@@ -446,3 +446,146 @@ p{ margin:0 0 12px; color: var(--muted); }
 .to-top.show{ opacity:1; pointer-events:auto; }
 
 .small{ font-size: .8rem; }
+
+/* ------------------------------ */
+/* Mobile-specific refinements    */
+/* ------------------------------ */
+@media (max-width: 600px){
+  /* Header: allow wrapping and center items */
+  .site-header .container{ flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .site-header .brand{ flex: 1 1 100%; justify-content: center; }
+  .site-header .nav{ order: 3; width: 100%; display:flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+  .site-header .btn.btn-primary{ order: 2; padding: 10px 14px; font-size: .9rem; }
+
+  /* Hero spacing and visuals */
+  .hero{ padding: 40px 0 24px; }
+  .floating-badge{ display: none; }
+  .ph-hero{ min-height: 0; }
+  .ph-hero img{ border-radius: 40px; }
+
+  /* Section spacing tighter on mobile */
+  .section{ padding: 56px 0; }
+
+  /* Problem card image full width */
+  .problem-img{ width: 100%; max-width: 100%; }
+
+  /* Cards: a bit more gap for readability */
+  .cards{ gap: 16px; }
+
+  /* Stats: ensure good spacing */
+  .stats{ gap: 12px; }
+
+  /* CTA button sizing */
+  .btn-xxl{ padding: 16px 22px; font-size: 1rem; }
+
+  /* Footer: center align blocks */
+  .footer-grid{ text-align: center; }
+  .footer-links{ align-items: center; }
+}
+
+/* Modal: inscription              */
+body.modal-open{ overflow: hidden; }
+.modal{ position: fixed; inset: 0; display: none; z-index: 1000; }
+.modal.show{ display: block; }
+.modal-backdrop{ position: absolute; inset: 0; background: rgba(0,0,0,.55); backdrop-filter: blur(2px); }
+.modal-content{ position: relative; z-index: 1; max-width: 720px; width: calc(100% - 24px); margin: 24px auto; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 18px 60px rgba(0,0,0,.45); overflow: hidden; display: flex; flex-direction: column; max-height: 90vh; }
+.modal-header{ display:flex; align-items:center; justify-content: space-between; gap: 8px; padding: 14px 16px; border-bottom: 1px solid var(--border); background: var(--bg-alt); }
+.modal-header h3{ margin: 0; font-size: clamp(18px, 2.4vw, 22px); }
+.modal-close{ background: transparent; border: 1px solid var(--border); color: var(--text); width: 34px; height: 34px; border-radius: 8px; cursor: pointer; }
+
+/* Force a light (clair) presentation for the inscription modal regardless of theme */
+.modal .modal-content{ background: #ffffff; border-color: rgba(0,0,0,0.08); }
+.modal .modal-header{ background: #f7fafc; border-bottom-color: rgba(0,0,0,0.08); color: #0b0f1a; }
+.modal .modal-close{ color: #0b0f1a; border-color: rgba(0,0,0,0.08); background: #ffffff; }
+.modal #inscription-form{ background: #ffffff; }
+.modal #inscription-form .form-group label{ color: #0b0f1a; }
+.modal #inscription-form input,
+.modal #inscription-form textarea,
+.modal #inscription-form select{ background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.12); }
+.modal #inscription-form input::placeholder,
+.modal #inscription-form textarea::placeholder{ color: #6b7280; }
+.modal #inscription-form .inline-options .seg span{ background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.12); }
+.modal #inscription-form .inline-options .seg input[type="radio"]:checked + span{ background: #2d7cff; border-color: #2d7cff; color: #ffffff; }
+.modal #inscription-form .btn.btn-ghost{ color: #0b0f1a; border-color: rgba(0,0,0,0.12); background: #ffffff; }
+
+/* Inscription modal: attractive section picker */
+.section-picker{ padding: 16px; }
+.section-picker .picker-title{ margin: 0 0 12px; text-align: center; font-weight: 800; color: #0b0f1a; }
+.section-cards{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px){
+  .section-cards{ grid-template-columns: 1fr; }
+}
+.section-card{
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.08);
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  color: #0b0f1a; text-decoration: none; position: relative;
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.section-card:hover{ transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,.16); border-color: rgba(0, 153, 255, .25); }
+.section-card .icon{ font-size: 24px; width: 36px; height: 36px; display:grid; place-items:center; border-radius: 10px; background: #eef6ff; }
+.section-card.section-en .icon{ background: linear-gradient(135deg, #cfe7ff, #e8f5ff); }
+.section-card.section-fr .icon{ background: linear-gradient(135deg, #e6d9ff, #f1eaff); }
+.section-card .content h5{ margin: 0; font-size: 1.05rem; letter-spacing: .2px; }
+.section-card .content p{ margin: 2px 0 0; color: #475569; font-size: .9rem; }
+.section-card .arrow{ margin-left: auto; font-weight: 800; color: #2d7cff; }
+
+#inscription-form{ padding: 16px; display: grid; gap: 12px; overflow: auto; flex: 1 1 auto; -webkit-overflow-scrolling: touch; }
+.form-group{ display: grid; gap: 6px; text-align: left; }
+.form-group label{ font-weight: 600; }
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width: 100%; padding: 12px 12px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--bg-alt); color: var(--text);
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{ outline: none; box-shadow: 0 0 0 3px rgba(45,124,255,.25); border-color: #2d7cff; }
+.form-actions{ display:flex; gap: 10px; justify-content: flex-end; padding-top: 4px; }
+.form-row.two{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+@media (max-width: 700px){ .form-row.two{ grid-template-columns: 1fr; } }
+@media (max-width: 600px){
+  .modal-content{ margin: 10px auto; width: calc(100% - 12px); border-radius: 14px; }
+  .form-actions{ flex-direction: column; }
+}
+
+/* Inline radio options (Section) */
+.inline-options{ display: flex; gap: 12px; flex-wrap: wrap; }
+.inline-options label{ display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+.inline-options .seg{ position: relative; }
+.inline-options .seg input[type="radio"]{ position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
+.inline-options .seg span{
+  display: inline-block; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--bg-alt); color: var(--text); transition: all .18s ease-in-out;
+}
+.inline-options .seg input[type="radio"]:checked + span{
+  background: #2d7cff; border-color: #2d7cff; color: #fff;
+}
+.inline-options .seg input[type="radio"]:focus-visible + span{
+  outline: none; box-shadow: 0 0 0 3px rgba(45,124,255,.35);
+}
+
+/* In-modal confirmation dialog */
+.confirm-backdrop{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 5;
+  padding: 16px;
+}
+.confirm-card{
+  max-width: 520px;
+  width: 100%;
+  background: #ffffff;
+  color: #0b0f1a;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  padding: 16px;
+}
+.confirm-text{ margin: 0 0 14px; line-height: 1.5; }
+.confirm-actions{ display: flex; gap: 10px; justify-content: flex-end; }

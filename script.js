@@ -4,8 +4,8 @@ window.addEventListener('DOMContentLoaded', () => {
   (function initTheme(){
     const root = document.documentElement;
     const saved = localStorage.getItem('theme');
-    const systemLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-    let theme = saved || (systemLight ? 'light' : 'dark');
+    // Default to light if no saved preference
+    let theme = saved || 'light';
     if (theme === 'light') root.setAttribute('data-theme', 'light');
     else root.removeAttribute('data-theme'); // dark is default via :root
 
@@ -48,36 +48,66 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     }
   })();
+
   const { gsap } = window;
   if (!gsap) return;
 
-  gsap.registerPlugin(ScrollTrigger);
+  // Register plugin only if available
+  if (window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
 
-  // Progress bar
+  // Progress bar (optional)
   const bar = document.querySelector('.scroll-progress .bar');
-  const onScroll = () => {
-    const h = document.documentElement;
-    const st = h.scrollTop || document.body.scrollTop;
-    const sh = h.scrollHeight - h.clientHeight;
-    const p = (st / sh) * 100;
-    bar.style.width = `${p}%`;
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  if (bar) {
+    const onScroll = () => {
+      const h = document.documentElement;
+      const st = h.scrollTop || document.body.scrollTop;
+      const sh = h.scrollHeight - h.clientHeight;
+      const p = sh > 0 ? (st / sh) * 100 : 0;
+      bar.style.width = `${p}%`;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
-  // To top button
+  // To top button (optional)
   const toTop = document.querySelector('.to-top');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) toTop.classList.add('show');
-    else toTop.classList.remove('show');
-  }, { passive: true });
-  toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior: 'smooth' }));
+  if (toTop) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) toTop.classList.add('show');
+      else toTop.classList.remove('show');
+    }, { passive: true });
+    toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior: 'smooth' }));
+  }
 
-  // Hero entrance (updated for stacked layout)
-  gsap.from('.hero-copy > *', { y: 30, opacity: 0, duration: .8, stagger: .08, ease: 'power3.out' });
-  gsap.from('.ph-hero', { y: 40, opacity:0, duration: .9, delay: .2, ease: 'power3.out' });
-  gsap.from('.hero-cta', { y: 24, opacity:0, duration: .8, delay: .25, ease: 'power3.out' });
-  gsap.from('.floating-badge', { y: -10, opacity:0, duration: .8, stagger: .15, delay:.3, ease: 'power2.out' });
+  // Hero entrance (Reconstruction hero)
+  const heroExists = document.querySelector('.hero-reconstruction');
+  if (heroExists) {
+    // Prepare for smoother animation
+    gsap.set(['.hero-content', '.hero-image', '.hero-image img'], { willChange: 'transform, opacity' });
+
+    const tlHero = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    tlHero
+      // Left column: slide in from left
+      .from('.hero-content', { x: -40, opacity: 0, duration: 0.7 })
+      .from('.hero-content .tagline', { y: 12, opacity: 0, duration: 0.5 }, '-=0.45')
+      .from('.hero-content .sub-headline', { y: 12, opacity: 0, duration: 0.45 }, '-=0.38')
+      .from('.hero-benefits li', { y: 12, opacity: 0, duration: 0.4, stagger: 0.07 }, '-=0.34')
+      .from('.hero-content .btn', { y: 14, opacity: 0, duration: 0.5 }, '-=0.28')
+      // Right column: image slides in from right
+      .from('.hero-image', { x: 40, opacity: 0, duration: 0.7 }, '-=0.55')
+      .from('.hero-image img', { scale: 0.95, duration: 0.6 }, '-=0.55');
+
+    // Emphasis on "En 90 jours"
+    gsap.fromTo('.highlight-90',
+      { scale: 0.9 },
+      { scale: 1.1, duration: 0.9, ease: 'elastic.out(1, 0.6)', transformOrigin: 'left center' }
+    );
+
+    // Subtle float for the hero image
+    gsap.to('.hero-image img', { y: -8, duration: 3.2, ease: 'sine.inOut', repeat: -1, yoyo: true });
+  }
 
   // Parallax badges
   gsap.to('.floating-badge.badge-1', {
@@ -90,39 +120,19 @@ window.addEventListener('DOMContentLoaded', () => {
     y: -8, repeat: -1, yoyo: true, duration: 3.2, ease: 'sine.inOut'
   });
 
-  // Insert interstitial CTAs after each section with varied phrasing
-  // insertInterstitialCTAs();
+  // Devenir section: reveal cards progressively on scroll
+  const devenir = document.querySelector('#devenir .three-cards');
+  if (devenir && window.ScrollTrigger) {
+    gsap.from('#devenir .card', {
+      scrollTrigger: { trigger: '#devenir', start: 'top 75%', once: true },
+      y: 28,
+      opacity: 0,
+      duration: 0.6,
+      ease: 'power3.out',
+      stagger: 0.15
+    });
+  }
 
-//   function insertInterstitialCTAs(){
-//     const phrasesById = {
-//       probleme: "On clarifie la méthode, vous rejoignez ?",
-//       solution: "Cette approche vous parle ? Rejoignez le challenge !",
-//       resultats: "Prêt(e) à viser ces résultats ?",
-//       preuves: "Convaincu(e) par les témoignages ?",
-//     };
-//     const generic = [
-//       "Envie de participer et progresser ?",
-//       "On commence ensemble dès aujourd’hui ?",
-//       "Votre enfant mérite un cadre motivant—participez !",
-//       "Rejoignez le Challenge et passez à l’action",
-//     ];
-//     let gi = 0;
-//     const sections = document.querySelectorAll('.section');
-//     sections.forEach((sec) => {
-//       const id = sec.getAttribute('id') || '';
-//       const msg = phrasesById[id] || generic[(gi++) % generic.length];
-//       const wrapper = document.createElement('div');
-//       wrapper.className = 'section-cta';
-//       wrapper.innerHTML = `
-//         <div class="container">
-//           <div class="wrap">
-//             <span class="msg">${msg} <span class="highlight">Participez maintenant</span></span>
-//             <a class="btn btn-primary" href="#cta">Participer</a>
-//           </div>
-//         </div>`;
-//       sec.insertAdjacentElement('afterend', wrapper);
-//     });
-//   }
 
   // Section reveals (including interstitial CTAs)
   const sections = document.querySelectorAll('.section, .cta, .section-cta');
@@ -264,4 +274,191 @@ window.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => { layoutCircle(); });
   }
+
+// ------------------------------
+// Modal: Formulaire d'inscription
+// ------------------------------
+(function initInscriptionModal(){
+  const openBtns = document.querySelectorAll('[data-open-inscription]');
+  const modal = document.getElementById('inscription-modal');
+  if (!modal) return;
+  const backdrop = modal.querySelector('[data-close-inscription]');
+  const closeBtns = modal.querySelectorAll('[data-close-inscription]');
+  const form = document.getElementById('inscription-form');
+  const selectClasse = modal.querySelector('#classe-actuelle');
+  const sectionRadios = modal.querySelectorAll('input[name="section"]');
+
+  const classesFR = ["6e","5e","4e","3e","Seconde","Première","Terminale"];
+  const classesEN = ["Form 1","Form 2","Form 3","Form 4","Form 5","Lower Sixth","Upper Sixth"];
+
+  function populateClasses(section){
+    if (!selectClasse) return;
+    const opts = section === 'en' ? classesEN : classesFR;
+    // Reset options with placeholder
+    selectClasse.innerHTML = '';
+    const ph = document.createElement('option');
+    ph.value = '';
+    ph.disabled = true;
+    ph.selected = true;
+    ph.textContent = '— Sélectionner —';
+    selectClasse.appendChild(ph);
+    opts.forEach(v => {
+      const o = document.createElement('option');
+      o.value = v;
+      o.textContent = v;
+      selectClasse.appendChild(o);
+    });
+  }
+
+  function open(){
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    // focus first field
+    const first = modal.querySelector('input, textarea, button');
+    first && first.focus();
+    // Ensure classes are populated according to default/selected section
+    const checked = modal.querySelector('input[name="section"]:checked');
+    populateClasses(checked ? checked.value : 'fr');
+  }
+  function close(){
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+  }
+
+  openBtns.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); open(); }));
+  closeBtns.forEach(btn => btn.addEventListener('click', (e) => { e.preventDefault(); close(); }));
+  // close on ESC
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('show')) close(); });
+
+  // Change classes when section changes
+  sectionRadios.forEach(r => r.addEventListener('change', () => {
+    const val = r.value;
+    if (r.checked) populateClasses(val);
+  }));
+
+  if (form){
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const classe = (data.classe_actuelle || '').trim();
+      const link = resolveWhatsappLink(classe);
+      // Build/Show confirmation dialog
+      showConfirmDialog({
+        message: "Félicitations! Votre inscription a bien été prise en compte. Vous allez être redirigé vers le groupe WhatsApp adéquat.",
+        onConfirm: async (controls) => {
+          // Prepare payload
+          const payload = Object.fromEntries(new FormData(form).entries());
+          // Optional: include timestamp
+          payload._submitted_at = new Date().toISOString();
+          try{
+            controls.setLoading(true);
+            await postToAppsScript(payload);
+            // Success -> redirect
+            if (link){ window.location.href = link; }
+            // Reset and close modal afterward
+            form.reset();
+            const fr = modal.querySelector('#section-fr');
+            if (fr) fr.checked = true;
+            populateClasses('fr');
+            close();
+          }catch(err){
+            controls.setLoading(false);
+            alert('Erreur lors de l\'envoi du formulaire: ' + err.message + '\nVérifiez votre connexion ou les autorisations du script Google.');
+          }
+        }
+      });
+    });
+  }
+
+  function resolveWhatsappLink(classe){
+    // Normalize accents/case
+    const c = (classe || '').toLowerCase();
+    // French mappings
+    const linkA = 'https://chat.whatsapp.com/KwSn3NXz1iRCD7kJ2LkJFH'; // 6e -> 4e
+    const linkB = 'https://chat.whatsapp.com/HZhd4lCLzzvAX2wNY07fGP'; // 3e -> Seconde
+    const linkC = 'https://chat.whatsapp.com/KbNUaQMRHfSKXGKuV9QrQB'; // Première -> Terminale
+    if (["6e","6ème","6eme","form 1"].some(x => c.includes(x))) return linkA;
+    if (["5e","5ème","5eme","form 2"].some(x => c.includes(x))) return linkA;
+    if (["4e","4ème","4eme","form 3"].some(x => c.includes(x))) return linkA;
+    if (["3e","3ème","3eme","form 4"].some(x => c.includes(x))) return linkB;
+    if (["seconde","2nde","2nd","form 5"].some(x => c.includes(x))) return linkB;
+    if (["première","1ère","1ere","lower sixth"].some(x => c.includes(x))) return linkC;
+    if (["terminale","upper sixth"].some(x => c.includes(x))) return linkC;
+    // Default fallback
+    return linkB;
+  }
+
+  function showConfirmDialog({ message, onConfirm }){
+    // If already exists, remove before showing a fresh one
+    const existing = modal.querySelector('.confirm-backdrop');
+    if (existing) existing.remove();
+    const backdrop = document.createElement('div');
+    backdrop.className = 'confirm-backdrop';
+    backdrop.setAttribute('role','dialog');
+    backdrop.setAttribute('aria-modal','true');
+    const card = document.createElement('div');
+    card.className = 'confirm-card';
+    const text = document.createElement('p');
+    text.className = 'confirm-text';
+    text.textContent = message;
+    const actions = document.createElement('div');
+    actions.className = 'confirm-actions';
+    const confirmBtn = document.createElement('button');
+    confirmBtn.type = 'button';
+    confirmBtn.className = 'btn btn-primary';
+    confirmBtn.textContent = 'Confirmer';
+    const controls = {
+      setLoading(is){
+        if (is){
+          confirmBtn.disabled = true; cancelBtn.disabled = true;
+          confirmBtn.dataset.originalText = confirmBtn.textContent;
+          confirmBtn.textContent = 'Envoi en cours...';
+        }else{
+          confirmBtn.disabled = false; cancelBtn.disabled = false;
+          confirmBtn.textContent = confirmBtn.dataset.originalText || 'Confirmer';
+        }
+      },
+      close(){ backdrop.remove(); }
+    };
+    confirmBtn.addEventListener('click', async () => {
+      // Keep backdrop while processing; let handler remove it on success
+      onConfirm && onConfirm(controls);
+    });
+    const cancelBtn = document.createElement('button');
+    cancelBtn.type = 'button';
+    cancelBtn.className = 'btn btn-ghost';
+    cancelBtn.textContent = 'Annuler';
+    cancelBtn.addEventListener('click', () => backdrop.remove());
+    actions.appendChild(confirmBtn);
+    actions.appendChild(cancelBtn);
+    card.appendChild(text);
+    card.appendChild(actions);
+    backdrop.appendChild(card);
+    // Place inside modal-content for stacking
+    const content = modal.querySelector('.modal-content') || modal;
+    content.appendChild(backdrop);
+    // Focus confirm
+    confirmBtn.focus();
+  }
+
+  // Google Apps Script endpoint POST helper
+  async function postToAppsScript(payload){
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFp87uwBqLbM8SJICmYkZB8COiLkgs0ZMDUj2pEdPXRoKZcGpy61mN5AztpxgO6k1M/exec';
+    const res = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    // Try to parse JSON if possible; if CORS prevents reading, proceed on status OK
+    let data = null;
+    try { data = await res.json(); } catch(e) { /* ignore parse errors */ }
+    if (!res.ok || (data && data.ok === false)){
+      const msg = data && data.error ? data.error : `HTTP ${res.status}`;
+      throw new Error(msg);
+    }
+    return data;
+  }
+})();
 });

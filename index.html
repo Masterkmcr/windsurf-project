@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -101,7 +101,7 @@
                 <strong>Améliore tes notes</strong>, gagne en confiance et joins-toi à une communauté d’élèves motivés.
                 <strong>Des défis </strong>chaque semaine, <strong>un mentorat bienveillant</strong> et <strong>une vraie chance </strong>d’aller loin.
               </p>
-              <a class="btn btn--primary btn-lg" href="#inscription">Rejoindre le groupe gratuit</a>
+              <a class="btn btn--primary btn-lg" href="#cta">Rejoindre le groupe gratuitement</a>
             </div>
           </div>
         </div>
@@ -146,8 +146,8 @@
           </div>
           <h3>🏗️ Étape 1 – Les Fondations</h3>
           <p>« Avant de courir, il faut apprendre à marcher. Alors la première étape, c’est de mettre de l’ordre dans ta façon de travailler.
-Tu vas apprendre à organiser ton temps, à comprendre comment mémoriser plus facilement, à te concentrer sans perdre des heures pour rien.
-Bref, tu construis une base solide. Et une fois que tu as ça, plus rien ne peut t’arrêter. »</p>
+            Tu vas apprendre à organiser ton temps, à comprendre comment mémoriser plus facilement, à te concentrer sans perdre des heures pour rien.
+            Bref, tu construis une base solide. Et une fois que tu as ça, plus rien ne peut t’arrêter. »</p>
         </article>
         <article class="card">
           <div class=" ph-card" data-label="Plan d'entraînement">
@@ -155,8 +155,8 @@ Bref, tu construis une base solide. Et une fois que tu as ça, plus rien ne peut
           </div>
           <h3>⚡ Étape 2 – Les Défis et Compétitions</h3>
           <p>« Une fois que tu as les bases, il faut passer à l’action. Et la meilleure façon de progresser, c’est de te challenger.
-Chaque semaine, tu participes à des quiz, des débats, des rédactions ou des projets de groupe.
-C’est fun, c’est stimulant, et surtout ça te donne confiance en toi. Tu n’es plus spectateur : tu deviens acteur, tu montres ce que tu sais faire, et tu vois tes progrès en direct. »</p>
+            Chaque semaine, tu participes à des quiz, des débats, des rédactions ou des projets de groupe.
+            C’est fun, c’est stimulant, et surtout ça te donne confiance en toi. Tu n’es plus spectateur : tu deviens acteur, tu montres ce que tu sais faire, et tu vois tes progrès en direct. »</p>
         </article>
         <article class="card">
           <div class=" ph-card" data-label="Défis & GSAP animations">
@@ -164,8 +164,8 @@ C’est fun, c’est stimulant, et surtout ça te donne confiance en toi. Tu n�
           </div>
           <h3>🌍 Étape 3 – L’Excellence</h3>
           <p>« Là, on passe au niveau supérieur. Tu n’es plus seulement un élève qui apprend, tu deviens un compétiteur.
-On t’entraîne avec les meilleures méthodes pour viser les Olympiades, tu échanges avec d’autres qui visent haut comme toi, tu te fais coacher et tu apprends à transmettre à ton tour.
-Et surtout, tu commences à rêver grand : représenter ton pays, voyager, montrer ton talent au monde entier… et ouvrir la porte aux plus grandes universités. »</p>
+            On t’entraîne avec les meilleures méthodes pour viser les Olympiades, tu échanges avec d’autres qui visent haut comme toi, tu te fais coacher et tu apprends à transmettre à ton tour.
+            Et surtout, tu commences à rêver grand : représenter ton pays, voyager, montrer ton talent au monde entier… et ouvrir la porte aux plus grandes universités. »</p>
         </article>
       </div>
     </div>
@@ -353,9 +353,9 @@ Et surtout, tu commences à rêver grand : représenter ton pays, voyager, montr
         </ul>
       </div>
       <div class="cta-actions">
-        <a class="btn btn-primary btn-lg" href="#inscription">Je m’inscris</a>
+        <a class="btn btn-primary btn-lg" href="#inscription" data-open-inscription>Je m’inscris</a>
         <a class="btn btn-ghost" href="#programme">Voir le programme</a>
-        <div class="img-ph ph-cta" data-label="Visuel CTA"><span><img src="images/imgl.jpg" alt=""></span></div>
+        <div class="ph-cta" data-label="Visuel CTA"><span><img src="images/imgl.jpg" alt=""></span></div>
       </div>
     </div>
   </section>
@@ -387,5 +387,46 @@ Et surtout, tu commences à rêver grand : représenter ton pays, voyager, montr
   </footer>
 
   <button class="to-top" aria-label="Remonter en haut">↑</button>
+
+  <!-- Modal: Choix de la section et formulaire intégré -->
+  <div class="modal" id="inscription-modal" role="dialog" aria-modal="true" aria-labelledby="inscription-title" aria-hidden="true">
+    <div class="modal-backdrop" data-close-inscription></div>
+    <div class="modal-content" role="document">
+      <div class="modal-header">
+        <h3 id="inscription-title">Inscription au programme</h3>
+        <button class="modal-close" type="button" aria-label="Fermer" data-close-inscription>✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="section-picker">
+          <h4 class="picker-title">Choisis ta section</h4>
+          <div class="section-cards" aria-label="Sélection section">
+            <a class="section-card section-en" href="https://docs.google.com/forms/d/e/1FAIpQLScGV1X6WRF1_8HRkaMFdzfMmVmBctGuSStE7t1EiyfoRCAhWQ/viewform" target="_blank" rel="noopener">
+              <div class="icon">🇬🇧</div>
+              <div class="content">
+                <h5>Anglophone</h5>
+                <p>Formulaire en anglais. S’ouvre dans un nouvel onglet.</p>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+            <a class="section-card section-fr" href="https://docs.google.com/forms/d/e/1FAIpQLScn93paW1lkI10wdlFOHMg9IC4uISGqiRZG2s3k9lLUR6Lpow/viewform" target="_blank" rel="noopener">
+              <div class="icon">🇫🇷</div>
+              <div class="content">
+                <h5>Francophone</h5>
+                <p>Formulaire en français. S’ouvre dans un nouvel onglet.</p>
+              </div>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+          <p class="small muted" style="margin-top:8px;">Après avoir cliqué, tu peux revenir ici à tout moment.</p>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-ghost" data-close-inscription>Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // No inline toggling needed anymore since forms open in new tabs.
+  </script>
 </body>
 </html>

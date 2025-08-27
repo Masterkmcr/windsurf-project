@@ -1,66 +1,341 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Programme Reconstruction – Olympiades Cameroun</title>
-  <meta name="description" content="Découvre le programme Reconstruction: concentration, organisation, leadership." />
+  <title>Programme Reconstruction – Transformez l'avenir de votre enfant</title>
+  <meta name="description" content="En 90 jours, faites de votre enfant un génie capable de bâtir son avenir avec un portfolio de compétences concrètes et une posture de leader." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="reconstruction.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a href="index.html#hero" class="brand">
-        <div class="ph-logo" aria-label="Logo"><span><img src="images/logo.png" alt=""></span></div>
-        <span class="brand-name">Olympiades Cameroun</span>
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Logo Olympiades Cameroun" class="logo-img">
+        <span class="brand-name">Programme Reconstruction</span>
       </a>
       <nav class="nav">
-        <a href="index.html#probleme">Problème</a>
-        <a href="index.html#solution">Solution</a>
-        <a href="index.html#resultats">Résultats</a>
-        <a href="index.html#preuves">Preuves sociales</a>
+        <a href="#devenir">La Transformation</a>
+        <a href="#programme-detail">Le Programme</a>
+        <a href="#temoignages">Témoignages</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary" href="index.html#cta">Je veux participer</a>
+      <a class="btn btn-primary" href="#cta-final">Je veux commencer</a>
     </div>
   </header>
 
-  <section class="section" id="reconstruction">
-    <div class="container">
-      <div class="section-intro">
-        <h2>Programme <span class="gradient-text">Reconstruction</span></h2>
-        <p>Un accompagnement ciblé pour développer la concentration, l'organisation et le leadership.</p>
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section hero-reconstruction" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="tagline">En 90 jours, faites de votre enfant un <span>génie</span> capable de bâtir son avenir.</h1>
+          <p class="sub-headline">Il devient plus qu’un bon élève : il sait apprendre, s’exprimer, construire, résoudre, argumenter et s’organiser. Offrez-lui une longueur d’avance sur tous les autres.</p>
+          <ul class="hero-benefits">
+            <li>Même s’il part de zéro.</li>
+            <li>Même s’il manque de motivation.</li>
+            <li>Quels que soient ses blocages.</li>
+            <li>Même si vous êtes très occupé.</li>
+          </ul>
+          <a href="#cta-final" class="btn btn-primary btn-lg">Offrez cette transformation à votre enfant</a>
+        </div>
+        <div class="hero-image">
+          <img src="photos/img_boss.jpg" alt="Un enfant confiant et prêt à réussir">
+        </div>
       </div>
+    </section>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Focus & Concentration</h3>
-          <p>Techniques pratiques pour créer des routines efficaces, limiter les distractions et augmenter la capacité d'attention.</p>
-        </article>
-        <article class="card">
-          <h3>Organisation & Méthode</h3>
-          <p>Planning, priorisation et méthodes d'étude éprouvées pour progresser plus vite sans y passer des heures.</p>
-        </article>
-        <article class="card">
-          <h3>Leadership & Confiance</h3>
-          <p>Prise de parole, collaboration et esprit d'initiative pour devenir un repère positif dans ton entourage.</p>
-        </article>
+    <!-- CE QUE VOTRE ENFANT VA DEVENIR -->
+    <section class="section" id="devenir">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Ce que votre enfant va devenir</h2>
+          <p>Reconstruction ne crée pas juste un enfant motivé. Il forge un <strong>esprit d’élite</strong>.</p>
+        </div>
+        <div class="three-cards">
+          <article class="card">
+            <img src="photos/img_1.jpg" alt="Mémoire et attention" class="card-img">
+            <h3>Croissance intellectuelle</h3>
+            <p>Mémoire affûtée, attention maîtrisée, autonomie dans l’apprentissage. L’enfant comprend vite, apprend mieux, devient stratège.</p>
+          </article>
+          <article class="card">
+            <img src="photos/img_2.png" alt="Compétences techniques" class="card-img">
+            <h3>Compétences concrètes</h3>
+            <p>Résolution de problèmes complexes, développement de projets écrits et créatifs, et la capacité à mener un projet du début à la fin.</p>
+          </article>
+          <article class="card">
+            <img src="photos/img_3.jpg" alt="Leadership et savoir-être" class="card-img">
+            <h3>Savoir-être et leadership</h3>
+            <p>Il parle en public, défend ses idées, mène une équipe. Et surtout : il aime à nouveau apprendre.</p>
+          </article>
+        </div>
+         <div class="center-block cta-block">
+            <a href="#cta-final" class="btn btn-secondary">Offrez cette transformation à votre enfant maintenant</a>
+        </div>
       </div>
+    </section>
 
-      <div class="center-block" style="margin-top: 24px;">
-        <a class="btn btn-primary btn-lg" href="index.html#cta">Rejoindre le programme</a>
+    <!-- CE QUE VIVENT LES ENFANTS -->
+    <section class="section alt-bg" id="constat">
+        <div class="container-medium">
+            <div class="section-intro">
+                <h2>Ce que vivent les enfants aujourd’hui</h2>
+                <p class="large-text">La vérité ? Nos enfants ne sont pas paresseux. <strong>Ils sont brisés.</strong></p>
+            </div>
+            <p>Brisés par des enseignants démotivés, traumatisés par une école qui abrutit, victimes de pédagogies archaïques, soumis à une pression constante, envahis par des influences numériques toxiques et dégoûtés par des cours vides de sens. Certains disent même : “L’école, c’est de la prison.”</p>
+            <p><strong>Ce n’est pas un simple décrochage. C’est une détresse FORTE qui s’installe… et chaque jour de plus est un risque effrayant pour nos enfants.</strong></p>
+            <div class="center-block cta-block">
+                <a href="#cta-final" class="btn btn-primary">[CTA 3 : L’urgence est Capital. C’est maintenant qu’il faut agir.]</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRISE FAMILIALE -->
+    <section class="section">
+        <div class="container-medium">
+            <div class="section-intro">
+                <h2>Ce n’est pas qu’un problème d’enfant… C’est toute la famille qui paie le prix.</h2>
+            </div>
+            <ul>
+                <li>Vous investissez des millions à l’université pour un avenir incertain.</li>
+                <li>L’angoisse vous suit chaque jour : “Est-ce qu’il va s’en sortir ?”</li>
+                <li>L’école semble aller à l’encontre de vos valeurs.</li>
+                <li>Le monde change trop vite et vous doutez de l’éducation traditionnelle.</li>
+                <li>Vous cherchez quelque chose de plus profond, qui développe réellement l’intelligence et les valeurs.</li>
+            </ul>
+            <p>Ce n’est pas un simple problème de paresse. C’est une crise de sens, de méthode et d’avenir. Mais il existe une voie de sortie. Une vraie.</p>
+             <div class="center-block cta-block">
+                <a href="#cta-final" class="btn btn-secondary">[CTA 3 : Assez perdu de temps. C’est maintenant qu’il faut agir.]</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CE QUE FAIT RECONSTRUCTION -->
+    <section class="section alt-bg" id="programme-detail">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Ce que fait concrètement Reconstruction</h2>
+          <p>Ce n’est pas du soutien scolaire. C’est une transformation multidimensionnelle, pensée pour un impact durable.</p>
+        </div>
+        <div class="three-cards">
+          <article class="card">
+            <h3>Pilier 1 : Fondations humaines et cognitives</h3>
+            <p>Développement de la mémoire, de la concentration, de l’organisation mentale. On redonne à l’enfant le goût d’apprendre et de comprendre.</p>
+          </article>
+          <article class="card">
+            <h3>Pilier 2 : Compétences d’élite</h3>
+            <p>Résolution d’exercices complexes, développement de projets intellectuels, amélioration massive de l'expression. L'enfant crée un portfolio de haut niveau.</p>
+          </article>
+          <article class="card">
+            <h3>Pilier 3 : Identité, éthique et posture</h3>
+            <p>Éducation comportementale exigeante, développement d’une identité forte. L’enfant devient une source de fierté et un exemple.</p>
+          </article>
+        </div>
+        <div class="center-block cta-block">
+            <p>Ce programme est le pont entre le génie intérieur de l’enfant… et sa révélation au monde.</p>
+            <a class="btn btn-primary" href="#cta-final">[CTA 4 : Découvrir le contenu complet du programme]</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- GARANTIE -->
+    <section class="section guarantee-section">
+        <div class="container-medium">
+            <div class="section-intro">
+                <h2>Une double garantie pour vous rassurer</h2>
+                <p>Nous savons que c'est une décision importante. C'est pourquoi nous avons conçu une double garantie béton, qui vous permet d’intégrer le programme en toute confiance.</p>
+            </div>
+            <div class="guarantee-box">
+                <div class="guarantee-item">
+                    <h3>Garantie 1 : Satisfait ou remboursé sous 14 jours</h3>
+                    <p>Testez le programme pendant 14 jours complets. Si vous sentez que ce programme ne vous convient pas, un simple message suffit pour un remboursement intégral. Aucune justification à fournir.</p>
+                </div>
+                <div class="guarantee-item">
+                    <h3>Garantie 2 : Progrès visibles ou remboursement sous 90 jours</h3>
+                    <p>Si votre enfant a suivi le programme et que vous ne constatez aucun progrès dans sa méthode, sa concentration ou son implication, vous pouvez demander un remboursement intégral.</p>
+                </div>
+            </div>
+            <p class="bonus-guarantee"><strong>Bonus :</strong> Même en cas de remboursement, tous les kits pédagogiques, masterclass et outils reçus resteront à votre disposition.</p>
+        </div>
+    </section>
+
+    <!-- OUTILS ET ACCOMPAGNEMENT -->
+    <section class="section alt-bg" id="outils">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Les outils exclusifs et l’accompagnement</h2>
+                <p>Un bon outil seul ne suffit pas. Reconstruction met entre les mains de votre enfant des ressources puissantes et un encadrement structuré et humain.</p>
+            </div>
+            <div class="two-cols">
+                <div>
+                    <h3>Un accompagnement humain, constant et stratégique</h3>
+                    <ul>
+                        <li>Séances de coaching individuelles et de groupe.</li>
+                        <li>Écoute active et mentorat par des experts certifiés.</li>
+                        <li>Un environnement stimulant, joyeux et orienté excellence.</li>
+                    </ul>
+                    <h3>Des projets concrets, utiles, valorisants</h3>
+                    <ul>
+                        <li><strong>Projet La Plume d’Or :</strong> l’enfant rédige et publie son propre livre.</li>
+                        <li><strong>Olympiades et compétitions internationales.</strong></li>
+                        <li><strong>Portfolio de projets</strong> pour prouver ses nouvelles compétences.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Des outils concrets, simples, mais puissants</h3>
+                    <ul>
+                        <li>Roadmap complète de la mémorisation.</li>
+                        <li>Calendrier de révision façon Lietner.</li>
+                        <li>Templates intelligents de planification.</li>
+                        <li>Guide stratégique de concentration et fiches d’analyse d’erreurs.</li>
+                        <li>Un Certificat de Soutien Académique délivré en fin de parcours.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center-block cta-block">
+                <a href="#cta-final" class="btn btn-secondary">[Je veux que mon enfant ait les bons outils ET le bon accompagnement]</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BONUS -->
+    <section class="section" id="bonus">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Bonus exclusifs réservés aux participants</h2>
+                <p>Des bonus à très haute valeur ajoutée, conçus pour déclencher une transformation profonde et durable.</p>
+            </div>
+            <div class="bonus-grid">
+                <div class="bonus-card"><strong>Bonus 1:</strong> Accès à une IA éducative personnalisée.</div>
+                <div class="bonus-card"><strong>Bonus 2:</strong> Coachings métiers avec des professionnels.</div>
+                <div class="bonus-card"><strong>Bonus 3:</strong> Accès à un réseau de mentors exceptionnels.</div>
+                <div class="bonus-card"><strong>Bonus 4:</strong> Formations professionnalisantes (code, vidéo...).</div>
+                <div class="bonus-card"><strong>Bonus 5:</strong> Masterclass Concentration en Environnement Hostile.</div>
+                <div class="bonus-card"><strong>Bonus 6:</strong> Kit visuel de planification express.</div>
+                <div class="bonus-card"><strong>Bonus 7:</strong> Mini-guide TDAH et besoins spécifiques.</div>
+                <div class="bonus-card"><strong>Bonus 8:</strong> Fiches d’expression et de débats.</div>
+                <div class="bonus-card"><strong>Bonus 9:</strong> Module spécial “Projet personnel”.</div>
+                <div class="bonus-card"><strong>Bonus 10:</strong> Accès à vie aux ressources du programme.</div>
+            </div>
+            <div class="center-block cta-block">
+                <a href="#cta-final" class="btn btn-primary">[Je veux que mon enfant bénéficie aussi de ces bonus exceptionnels]</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVANT/APRES -->
+    <section class="section alt-bg" id="avant-apres">
+        <div class="container">
+            <div class="two-cols-compare">
+                <div class="avant">
+                    <h3>AVANT</h3>
+                    <p>La réalité que vivent beaucoup de familles :</p>
+                    <ul>
+                        <li>Enfants démotivés, perdus, qui se renferment.</li>
+                        <li>Difficultés à suivre, échecs malgré les efforts.</li>
+                        <li>Bases fragiles, manque de concentration, procrastination.</li>
+                        <li>Comportement inquiétant, parents épuisés et angoissés.</li>
+                        <li>Sentiment que le système éducatif est dépassé.</li>
+                    </ul>
+                </div>
+                <div class="apres">
+                    <h3>APRÈS</h3>
+                    <p>Ce que nous construisons en 90 jours :</p>
+                    <ul>
+                        <li>Un enfant confiant, qui sait où il va.</li>
+                        <li>Des résultats visibles, une expression claire.</li>
+                        <li>Un portfolio concret de projets réalisés.</li>
+                        <li>Capacité à planifier, organiser, résoudre des problèmes.</li>
+                        <li>Un comportement fiable, respectueux et ouvert.</li>
+                        <li>Parents fiers et certains que leur enfant est sur la bonne voie.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEMOIGNAGES -->
+    <section class="section" id="temoignages">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Témoignages & preuves sociales</h2>
+                <p>Il n’y a rien de plus convaincant que les résultats vécus par d’autres parents comme vous.</p>
+            </div>
+            <div class="testimonials">
+                <article class="testimonial-card">
+                    <img src="photos/img_4.jpg" alt="Parent satisfait">
+                    <p>“Je ne vais pas mentir, j’étais vraiment sous une pression énorme. L’enfant avait rejeté l’école. [...] J’ai vu un changement dès la première semaine. Elle ne râlait plus. Elle s’y donnait vraiment. Et elle a même réussi ce concours du premier coup alors que même son établissement prédisait son échec.”</p>
+                    <footer>
+                        <strong>Madame Jeanine</strong>
+                        <span>Agent de voyage</span>
+                    </footer>
+                </article>
+                <article class="testimonial-card">
+                    <img src="photos/img_5.JPG" alt="Parent satisfait">
+                    <p>“Avant, mes enfants avaient déjà de bonnes notes. Mais je ne voyais pas de véritable méthode. [...] Quand ils ont intégré, le programme a commencé par leur inculquer la méthode et tout est allé très vite. Ils ont écrit un livre, conçu des Chatbots, des projets que même à 25 ans beaucoup n’ont pas encore réalisés.”</p>
+                    <footer>
+                        <strong>Madame Ernestine</strong>
+                        <span>Maître de conférences, Université de Yaoundé 1</span>
+                    </footer>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt-bg" id="faq">
+        <div class="container-medium">
+            <div class="section-intro">
+                <h2>Foire aux questions (FAQ)</h2>
+            </div>
+            <div class="faq-item">
+                <h4>Mon enfant n’a pas de difficulté majeure, est-ce que ce programme est aussi pour lui ?</h4>
+                <p>Oui. Reconstruction n’est pas un rattrapage, c’est une accélération. Même un bon élève y gagne en leadership, méthode, autonomie et excellence.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Est-ce que c’est en ligne ou en présentiel ?</h4>
+                <p>100% en ligne, avec des rendez-vous individuels, des vidéos, des supports imprimables, et des interactions humaines régulières.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Mon enfant a un trouble de l’attention, est-ce adapté ?</h4>
+                <p>Oui. Nous avons prévu un accompagnement spécifique, avec des supports visuels, des méthodes douces et progressives.</p>
+            </div>
+            <div class="faq-item">
+                <h4>À quel âge peut-on intégrer Reconstruction ?</h4>
+                <p>Le programme est idéal pour les enfants entre 9 et 16 ans, quel que soit leur niveau scolaire ou leurs difficultés.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Puis-je suivre l’évolution de mon enfant ?</h4>
+                <p>Oui. Vous recevrez régulièrement des bilans de progrès, des comptes-rendus et des productions réalisées par votre enfant.</p>
+            </div>
+             <div class="faq-item">
+                <h4>Et si le programme ne fonctionne pas pour mon enfant ?</h4>
+                <p>Nous mettons un point d’honneur à la réussite de chaque enfant. Si au bout de 14 jours vous appliquez nos conseils et que vous ne voyez aucun progrès, nous vous remboursons intégralement – c’est notre garantie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section final-cta" id="cta-final">
+        <div class="container-medium">
+            <h2>Un enfant transformé, c’est une famille entière qui respire mieux.</h2>
+            <p>Ne laissez pas les doutes voler les chances de votre enfant. Donnez-lui les clés de sa réussite.</p>
+            <a href="#" class="btn btn-primary btn-lg">[CTA final ultime : Oui, je veux qu’il réussisse]</a>
+        </div>
+    </section>
+
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <div class="brand mini">
-          <div class="ph-logo" aria-label="Logo"><span><img src="images/logo.png" alt=""></span></div>
-          <span class="brand-name">Olympiades Cameroun</span>
+          <img src="images/logo.png" alt="Logo Olympiades Cameroun" class="logo-img">
+          <span class="brand-name">Programme Reconstruction</span>
         </div>
         <p class="muted">© 2025. Tous droits réservés.</p>
       </div>
@@ -69,14 +344,18 @@
         <p class="muted">Email: contact@exemple.com</p>
       </div>
       <div>
-        <h5>Retour</h5>
+        <h5>Navigation</h5>
         <nav class="footer-links">
-          <a href="index.html#hero">Accueil</a>
-          <a href="index.html#preuves">Témoignages</a>
-          <a href="index.html#cta">Participer</a>
+          <a href="#hero">Accueil</a>
+          <a href="#temoignages">Témoignages</a>
+          <a href="#cta-final">Participer</a>
         </nav>
       </div>
     </div>
   </footer>
+  <!-- GSAP Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
