@@ -78,8 +78,22 @@ p{ margin:0 0 12px; color: var(--muted); }
   .grid-2{ grid-template-columns: 1fr; }
 }
 
-.btn{ display:inline-flex; align-items:center; gap:8px; padding:15px 25px; border-radius:12px; border:1px solid var(--border); background: rgba(255,255,255,0.04); color: var(--text); transition: transform .2s, background .2s; }
+.site-header{ position: sticky; top:0; z-index: 50; backdrop-filter: blur(8px); background: var(--header-bg); border-bottom: 1px solid var(--border); transition: var(--transition-theme); }
+.site-header .container{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 20px; transition: padding .2s ease; }
+.site-header.condensed .container{ padding: 8px 16px; }
+.site-header.condensed .brand .logo-img{ transform: scale(.92); transition: transform .18s ease; }
+
+.nav{ display:flex; gap:16px; }
+.nav a{ padding: 8px 10px; border-radius: 8px; position: relative; }
+.nav a:hover{ background: rgba(255,255,255,0.06); }
+.nav a{ transition: var(--transition-theme); }
+.nav a .ink{ position:absolute; left:10px; right:10px; bottom: 4px; height: 2px; background: var(--primary); transform: scaleX(0); transform-origin: left; border-radius: 2px; opacity: .95; }
+/* CSS fallback if JS disabled */
+.nav a:hover .ink, .nav a:focus-visible .ink{ transform: scaleX(1); transition: transform .18s ease; }
+
+.btn{ display:inline-flex; align-items:center; gap:8px; padding:15px 25px; border-radius:12px; border:1px solid var(--border); background: rgba(255,255,255,0.04); color: var(--text); transition: transform .2s, background .2s; will-change: transform; }
 .btn:hover{ transform: translateY(-2px); background: rgba(255,255,255,0.06); }
+.btn:active{ transform: translateY(0); }
 .btn-primary{ background: linear-gradient(135deg, var(--primary), var(--primary-2)); color:#071022; border: none; box-shadow: 0 8px 24px rgba(0, 153, 255, .25); }
 .btn-primary:hover{ filter: brightness(1.05); }
 .btn--primary{ background: linear-gradient(135deg, var(--primary), var(--primary-2)); color:#071022; border: none; box-shadow: 0 8px 24px rgba(0, 153, 255, .25); font-weight: 700; }
@@ -94,15 +108,6 @@ p{ margin:0 0 12px; color: var(--muted); }
 
 .scroll-progress{ position: fixed; top: 0; left: 0; right: 0; height: 4px; background: rgba(255,255,255,0.06); z-index: 999; }
 .scroll-progress .bar{ display:block; height:100%; width:0%; background: linear-gradient(90deg, var(--primary), var(--primary-2)); }
-
-.site-header{ position: sticky; top:0; z-index: 50; backdrop-filter: blur(8px); background: var(--header-bg); border-bottom: 1px solid var(--border); transition: var(--transition-theme); }
-.site-header .container{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 20px; }
-.brand{ display:flex; align-items:center; gap:12px; }
-.brand-name{ font-weight:700; letter-spacing: 0.2px; }
-.nav{ display:flex; gap:16px; }
-.nav a{ padding: 8px 10px; border-radius: 8px; }
-.nav a:hover{ background: rgba(255,255,255,0.06); }
-.nav a{ transition: var(--transition-theme); }
 
 .hero{ position:relative; padding: 64px 0 40px; overflow:hidden; }
 .hero .lead{ font-size: 1.1rem; }
@@ -501,7 +506,9 @@ body.modal-open{ overflow: hidden; }
 .modal #inscription-form .form-group label{ color: #0b0f1a; }
 .modal #inscription-form input,
 .modal #inscription-form textarea,
-.modal #inscription-form select{ background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.12); }
+.modal #inscription-form select{
+  background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.12);
+}
 .modal #inscription-form input::placeholder,
 .modal #inscription-form textarea::placeholder{ color: #6b7280; }
 .modal #inscription-form .inline-options .seg span{ background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.12); }

@@ -15,8 +15,7 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="brand">
-        <img src="images/logo.png" alt="Logo Olympiades Cameroun" class="logo-img">
-        <span class="brand-name">Programme Reconstruction</span>
+        <img src="photos/logo_ta.png" alt="Logo Tutoring Academia" class="logo-img">
       </a>
       <nav class="nav">
         <a href="#devenir">La Transformation</a>
@@ -24,7 +23,7 @@
         <a href="#temoignages">Témoignages</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary" href="#cta-final">Je veux commencer</a>
+      <a class="btn btn-primary" href="#" data-open-docs>Telecharger les documents ici</a>
     </div>
   </header>
 
@@ -35,16 +34,16 @@
         <div class="hero-content">
           <h1 class="tagline">En 90 jours, faites de votre enfant un <span>génie</span> capable de bâtir son avenir.</h1>
           <p class="sub-headline">Il devient plus qu’un bon élève : il sait apprendre, s’exprimer, construire, résoudre, argumenter et s’organiser. Offrez-lui une longueur d’avance sur tous les autres.</p>
-          <ul class="hero-benefits">
-            <li>Même s’il part de zéro.</li>
-            <li>Même s’il manque de motivation.</li>
-            <li>Quels que soient ses blocages.</li>
-            <li>Même si vous êtes très occupé.</li>
-          </ul>
           <a href="#cta-final" class="btn btn-primary btn-lg">Offrez cette transformation à votre enfant</a>
         </div>
         <div class="hero-image">
-          <img src="photos/img_boss.jpg" alt="Un enfant confiant et prêt à réussir">
+          <img src="photos/img_backgound.png" alt="Un enfant confiant et prêt à réussir">
+          <div class="float-badges" aria-hidden="true">
+            <span class="float-badge fb-1">Même s’il part <br> de zéro.</span>
+            <!-- <span class="float-badge fb-2">Même s’il manque <br> de motivation.</span> -->
+            <span class="float-badge fb-3">Quels que soient <br> ses blocages.</span>
+            <!-- <span class="float-badge fb-4">Même si vous êtes très <br> occupé.</span> -->
+          </div>
         </div>
       </div>
     </section>
@@ -74,7 +73,7 @@
           </article>
         </div>
          <div class="center-block cta-block">
-            <a href="#cta-final" class="btn btn-secondary">Offrez cette transformation à votre enfant maintenant</a>
+            <a href="#cta-final" class="btn btn-secondary btn">Offrez cette transformation à votre enfant maintenant</a>
         </div>
       </div>
     </section>
@@ -89,7 +88,7 @@
             <p>Brisés par des enseignants démotivés, traumatisés par une école qui abrutit, victimes de pédagogies archaïques, soumis à une pression constante, envahis par des influences numériques toxiques et dégoûtés par des cours vides de sens. Certains disent même : “L’école, c’est de la prison.”</p>
             <p><strong>Ce n’est pas un simple décrochage. C’est une détresse FORTE qui s’installe… et chaque jour de plus est un risque effrayant pour nos enfants.</strong></p>
             <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-primary">[CTA 3 : L’urgence est Capital. C’est maintenant qu’il faut agir.]</a>
+                <a href="#cta-final" class="btn btn-secondary">L’urgence est Capital. C’est maintenant qu’il faut agir.</a>
             </div>
         </div>
     </section>
@@ -109,7 +108,7 @@
             </ul>
             <p>Ce n’est pas un simple problème de paresse. C’est une crise de sens, de méthode et d’avenir. Mais il existe une voie de sortie. Une vraie.</p>
              <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-secondary">[CTA 3 : Assez perdu de temps. C’est maintenant qu’il faut agir.]</a>
+                <a href="#cta-final" class="btn btn-secondary">Assez perdu de temps. C’est maintenant qu’il faut agir.</a>
             </div>
         </div>
     </section>
@@ -137,7 +136,7 @@
         </div>
         <div class="center-block cta-block">
             <p>Ce programme est le pont entre le génie intérieur de l’enfant… et sa révélation au monde.</p>
-            <a class="btn btn-primary" href="#cta-final">[CTA 4 : Découvrir le contenu complet du programme]</a>
+            <a class="btn btn-primary" href="#cta-final">Découvrir le contenu complet du programme</a>
         </div>
       </div>
     </section>
@@ -197,7 +196,7 @@
                 </div>
             </div>
             <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-secondary">[Je veux que mon enfant ait les bons outils ET le bon accompagnement]</a>
+                <a href="#cta-final" class="btn btn-secondary">Je veux que mon enfant ait les bons outils ET le bon accompagnement</a>
             </div>
         </div>
     </section>
@@ -222,7 +221,7 @@
                 <div class="bonus-card"><strong>Bonus 10:</strong> Accès à vie aux ressources du programme.</div>
             </div>
             <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-primary">[Je veux que mon enfant bénéficie aussi de ces bonus exceptionnels]</a>
+                <a href="#cta-final" class="btn btn-primary">Je veux que mon enfant bénéficie aussi de ces bonus exceptionnels</a>
             </div>
         </div>
     </section>
@@ -328,6 +327,57 @@
         </div>
     </section>
 
+    <!-- Documents Modal -->
+    <div id="docs-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="docs-modal-title">
+      <div class="modal-content" role="document">
+        <button class="modal-close" type="button" aria-label="Fermer" data-close-docs>×</button>
+        <h3 id="docs-modal-title">Documents du programme</h3>
+        <p class="muted">Téléchargez les ressources officielles du programme.</p>
+        <div class="docs-list">
+          <article class="doc-item">
+            <div class="doc-meta">
+              <h4>Activités du programme</h4>
+              <p>Aperçu des ateliers, projets et activités clés proposés.</p>
+            </div>
+            <a href="documents/Activités du programme.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
+          </article>
+
+          <article class="doc-item">
+            <div class="doc-meta">
+              <h4>Calendrier</h4>
+              <p>Planning des grandes étapes et jalons du programme.</p>
+            </div>
+            <a href="documents/Calendrier.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
+          </article>
+
+          <article class="doc-item">
+            <div class="doc-meta">
+              <h4>Guide de la concentration (Anglais)</h4>
+              <p>Méthodes et outils pour améliorer l’attention et la concentration.</p>
+            </div>
+            <a href="documents/Guide de la concentration (Anglais).pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
+          </article>
+
+          <article class="doc-item">
+            <div class="doc-meta">
+              <h4>J’aide mon enfant à mieux s’organiser – Partie 1</h4>
+              <p>Stratégies pratiques pour structurer le travail et le temps.</p>
+            </div>
+            <a href="documents/J’aide mon enfant à mieux s’organiser-partie 1.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
+          </article>
+
+          <article class="doc-item">
+            <div class="doc-meta">
+              <h4>Programme Reconstruction</h4>
+              <p>Document complet présentant le contenu et les objectifs.</p>
+            </div>
+            <a href="documents/Programme reconstruction.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
+          </article>
+        </div>
+      </div>
+      <button class="backdrop" data-close-docs aria-label="Fermer"></button>
+    </div>
+
   </main>
 
   <footer class="site-footer">
@@ -337,7 +387,7 @@
           <img src="images/logo.png" alt="Logo Olympiades Cameroun" class="logo-img">
           <span class="brand-name">Programme Reconstruction</span>
         </div>
-        <p class="muted">© 2025. Tous droits réservés.</p>
+        <p class="muted"> 2025. Tous droits réservés.</p>
       </div>
       <div>
         <h5>Contact</h5>
