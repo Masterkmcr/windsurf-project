@@ -45,26 +45,6 @@
   --transition-theme: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, filter .25s ease;
 }
 
-/* Light theme */
-[data-theme="light"]{
-  --bg: #f6f8fc;
-  --bg-alt: #ffffff;
-  --bg-gradient: linear-gradient(180deg, #f7fafc 0%, #ffffff 40%, #f6f8fc 100%);
-  --text: #0b0f1a;
-  --muted: #475569;
-  --primary: #2d7cff; /* keep brand */
-  --primary-2: #00bcd4;
-  --accent: #4f46e5;
-  --surface: #ffffff;
-  --card: #ffffff;
-  --border: rgba(0,0,0,0.08);
-  --header-bg: rgba(255,255,255,0.7);
-  --footer-bg: #f1f5f9;
-  --badge-bg: #eaf2ff;
-  --badge-text: #0b3d91;
-  --transition-theme: color .25s ease, background-color .25s ease, border-color .25s ease, box-shadow .25s ease, filter .25s ease;
-}
-
 *{ box-sizing: border-box; }
 html,body{ margin:0; padding:0; font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--bg-gradient); transition: var(--transition-theme); }
 img{ max-width:100%; height:auto; display:block; }
@@ -192,9 +172,9 @@ p{ margin:0 0 12px; color: var(--muted); }
 #promesses .panel.before .panel-header h3{ color: #ff6b6b; }
 
 /* AFTER: light panel with green accents (ensure readable in dark theme) */
-#promesses .panel.after{ background: #ffffff; color: #0b0f1a; border-color: rgba(34,197,94,.35); }
+#promesses .panel.after{ background: #0f1726; color: #e9eef7; border-color: rgba(34,197,94,.35); }
 #promesses .panel.after .panel-header h3{ color: #22c55e; }
-#promesses .panel.after p{ color: #0b0f1a; }
+#promesses .panel.after p{ color: #e9eef7; }
 
 /* Lists inside panels */
 #promesses .panel-list{ list-style: none; padding: 0; margin: 8px 0 0; display:flex; flex-direction: column; gap: 10px; }
@@ -209,11 +189,7 @@ p{ margin:0 0 12px; color: var(--muted); }
 
 /* Opportunities block inside AFTER panel */
 #promesses .opportunities{ margin-top: 12px; padding-top: 10px; border-top: 1px dashed rgba(34,197,94,.35); }
-#promesses .opportunities .op-title{ font-weight: 700; color: #0b0f1a; margin-bottom: 6px; }
-
-/* Light theme adjustments so BEFORE panel stays dark but legible */
-[data-theme="light"] #promesses .panel.before{ background: #0f1322; color: #e9eef7; }
-[data-theme="light"] #promesses .panel.before .panel-list li{ color: #e9eef7; }
+#promesses .opportunities .op-title{ font-weight: 700; color: #e9eef7; margin-bottom: 6px; }
 
 /* One-time glass/reflection sheen for promesses items (still supported) */
 #promesses .promises li.sheen-once::after{
@@ -318,8 +294,8 @@ p{ margin:0 0 12px; color: var(--muted); }
 .problem-layout .section-copy{ align-self: center; text-align: left; }
 .problem-layout .section-copy .btn{ margin-top: 10px; }
 /* White rounded card for sub text + button */
-.problem-card{ background:#ffffff; color:#0b0f1a; border-radius: 20px; padding: 18px; border:1px solid rgba(0,0,0,0.06); box-shadow: 0 16px 40px rgba(0,0,0,.25); text-align:center; }
-.problem-card p{ color:#0b0f1a; margin-bottom: 12px; }
+.problem-card{ background:#0f1726; color:#e9eef7; border-radius: 20px; padding: 18px; border:1px solid rgba(255,255,255,0.08); box-shadow: 0 16px 40px rgba(0,0,0,.25); text-align:center; }
+.problem-card p{ color:#e9eef7; margin-bottom: 12px; }
 .problem-card .btn{ box-shadow: 0 8px 24px rgba(0, 153, 255, .25); }
 @media (max-width: 900px){
   .problem-img{ width: 100%; max-width: 420px; }
@@ -334,9 +310,9 @@ p{ margin:0 0 12px; color: var(--muted); }
 .card h3{ margin-top:10px; }
 
 /* Solution cards: white fill and dark text for contrast */
-#solution .card{ background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.06); transition: var(--transition-theme); }
-#solution .card{ background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%); gap: 12px; }
-#solution .card p{ color: #0b0f1a; transition: var(--transition-theme); }
+#solution .card{ background: #0f1726; color: #e9eef7; border-color: rgba(255,255,255,0.08); transition: var(--transition-theme); }
+#solution .card{ background: linear-gradient(180deg, #0f1726 0%, #10182b 100%); gap: 12px; }
+#solution .card p{ color: #e9eef7; transition: var(--transition-theme); }
 
 /* Consistent media height and image cover inside solution cards */
 #solution .ph-card{ height: 180px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
@@ -421,10 +397,10 @@ p{ margin:0 0 12px; color: var(--muted); }
 }
 
 /* White variant for Reconstruction CTA */
-.section-cta.section-cta--white{ background: #ffffff; border-top-color: rgba(0,0,0,0.08); border-bottom-color: rgba(0,0,0,0.08); }
+.section-cta.section-cta--white{ background: #0f1726; border-top-color: rgba(255,255,255,0.08); border-bottom-color: rgba(255,255,255,0.08); }
 .section-cta.section-cta--white .msg,
-.section-cta.section-cta--white p{ color: #0b0f1a; }
-.section-cta.section-cta--white .wrap{ color: #0b0f1a; }
+.section-cta.section-cta--white p{ color: #e9eef7; }
+.section-cta.section-cta--white .wrap{ color: #e9eef7; }
 
 .site-footer{ padding: 36px 0; background: var(--footer-bg); border-top: 1px solid var(--border); transition: var(--transition-theme); }
 .footer-grid{ display:grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 16px; }
@@ -499,34 +475,34 @@ body.modal-open{ overflow: hidden; }
 .modal-close{ background: transparent; border: 1px solid var(--border); color: var(--text); width: 34px; height: 34px; border-radius: 8px; cursor: pointer; }
 
 /* Force a light (clair) presentation for the inscription modal regardless of theme */
-.modal .modal-content{ background: #ffffff; border-color: rgba(0,0,0,0.08); }
-.modal .modal-header{ background: #f7fafc; border-bottom-color: rgba(0,0,0,0.08); color: #0b0f1a; }
-.modal .modal-close{ color: #0b0f1a; border-color: rgba(0,0,0,0.08); background: #ffffff; }
-.modal #inscription-form{ background: #ffffff; }
-.modal #inscription-form .form-group label{ color: #0b0f1a; }
+.modal .modal-content{ background: #0f1726; border-color: rgba(255,255,255,0.08); }
+.modal .modal-header{ background: #10182b; border-bottom-color: rgba(255,255,255,0.08); color: #e9eef7; }
+.modal .modal-close{ color: #e9eef7; border-color: rgba(255,255,255,0.08); background: #0f1726; }
+.modal #inscription-form{ background: #0f1726; }
+.modal #inscription-form .form-group label{ color: #e9eef7; }
 .modal #inscription-form input,
 .modal #inscription-form textarea,
 .modal #inscription-form select{
-  background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.12);
+  background: #0f1726; color: #e9eef7; border-color: rgba(255,255,255,0.12);
 }
 .modal #inscription-form input::placeholder,
 .modal #inscription-form textarea::placeholder{ color: #6b7280; }
-.modal #inscription-form .inline-options .seg span{ background: #ffffff; color: #0b0f1a; border-color: rgba(0,0,0,0.12); }
+.modal #inscription-form .inline-options .seg span{ background: #0f1726; color: #e9eef7; border-color: rgba(255,255,255,0.12); }
 .modal #inscription-form .inline-options .seg input[type="radio"]:checked + span{ background: #2d7cff; border-color: #2d7cff; color: #ffffff; }
-.modal #inscription-form .btn.btn-ghost{ color: #0b0f1a; border-color: rgba(0,0,0,0.12); background: #ffffff; }
+.modal #inscription-form .btn.btn-ghost{ color: #e9eef7; border-color: rgba(255,255,255,0.12); background: #0f1726; }
 
 /* Inscription modal: attractive section picker */
 .section-picker{ padding: 16px; }
-.section-picker .picker-title{ margin: 0 0 12px; text-align: center; font-weight: 800; color: #0b0f1a; }
+.section-picker .picker-title{ margin: 0 0 12px; text-align: center; font-weight: 800; color: #e9eef7; }
 .section-cards{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 @media (max-width: 600px){
   .section-cards{ grid-template-columns: 1fr; }
 }
 .section-card{
   display: flex; align-items: center; gap: 12px;
-  padding: 14px; border-radius: 12px; border: 1px solid rgba(0,0,0,0.08);
-  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-  color: #0b0f1a; text-decoration: none; position: relative;
+  padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(180deg, #0f1726 0%, #10182b 100%);
+  color: #e9eef7; text-decoration: none; position: relative;
   box-shadow: 0 10px 24px rgba(0,0,0,.10);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
@@ -587,9 +563,9 @@ body.modal-open{ overflow: hidden; }
 .confirm-card{
   max-width: 520px;
   width: 100%;
-  background: #ffffff;
-  color: #0b0f1a;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: #0f1726;
+  color: #e9eef7;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   box-shadow: 0 18px 50px rgba(0,0,0,.35);
   padding: 16px;

@@ -5,7 +5,6 @@
 class ReconstructionApp {
   constructor() {
     this.init();
-    this.initThemeToggle();
   }
 
   init() {
@@ -167,12 +166,12 @@ class ReconstructionApp {
         header.style.transform = 'translateY(0)';
       }
       
-      // Effet de transparence
+      // Effet de transparence pour dark mode
       if (currentScrollY > 50) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+        header.style.background = 'rgba(11, 15, 26, 0.98)';
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
       } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.background = 'rgba(11, 15, 26, 0.95)';
         header.style.boxShadow = 'none';
       }
       
@@ -267,58 +266,6 @@ class ReconstructionApp {
         }, 3000);
       }
     });
-  }
-
-  // Gestion du basculement de thème
-  initThemeToggle() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = themeToggle?.querySelector('.theme-icon');
-    
-    // Récupérer le thème sauvegardé ou utiliser le thème clair par défaut
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    this.setTheme(savedTheme);
-    
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        this.setTheme(newTheme);
-        
-        // Animation de rotation de l'icône
-        if (themeIcon) {
-          themeIcon.style.transform = 'rotate(360deg)';
-          setTimeout(() => {
-            themeIcon.style.transform = '';
-          }, 300);
-        }
-      });
-    }
-  }
-
-  setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    
-    // Mettre à jour l'icône
-    const themeIcon = document.querySelector('.theme-icon');
-    if (themeIcon) {
-      if (theme === 'dark') {
-        themeIcon.textContent = '☀️';
-      } else {
-        themeIcon.textContent = '🌙';
-      }
-    }
-    
-    // Effet de fondu pour la transition
-    document.body.style.opacity = '0.95';
-    setTimeout(() => {
-      document.body.style.opacity = '1';
-    }, 150);
-  }
-
-  // Méthode utilitaire pour les animations
-  animateElement(element, animation, duration = 600) {
-    element.style.animation = `${animation} ${duration}ms ease forwards`;
   }
 
   // Parallax pour les sections

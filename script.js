@@ -3,50 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // THEME: init from storage or system, then wire toggle
   (function initTheme(){
     const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    // Default to light if no saved preference
-    let theme = saved || 'light';
-    if (theme === 'light') root.setAttribute('data-theme', 'light');
-    else root.removeAttribute('data-theme'); // dark is default via :root
-
-    const btn = document.querySelector('.theme-toggle');
-    const logoImgs = document.querySelectorAll('.ph-logo img');
-    const applyLogo = () => {
-      const isLight = root.getAttribute('data-theme') === 'light';
-      // Brand logos
-      if (logoImgs && logoImgs.length > 0){
-        logoImgs.forEach(img => {
-          img.src = isLight ? 'images/logo_white.png' : 'images/logo.png';
-          img.alt = 'Logo';
-        });
-      }
-      // Partner logos: swap only the requested ones (including duplicates in carousel)
-      const partner1Imgs = document.querySelectorAll('.logos [data-label="Logo partenaire 1"] img');
-      const partner2Imgs = document.querySelectorAll('.logos [data-label="Logo partenaire 2"] img');
-      if (partner1Imgs && partner1Imgs.length){
-        partner1Imgs.forEach(img => { img.src = isLight ? 'images/part1_white.png' : 'images/part1.png'; });
-      }
-      if (partner2Imgs && partner2Imgs.length){
-        partner2Imgs.forEach(img => { img.src = isLight ? 'images/part2.png' : 'images/part2_black.png'; });
-      }
-    };
-    const setIcon = () => { btn && (btn.textContent = (root.getAttribute('data-theme') === 'light' ? '☀️' : '🌙')); };
-    applyLogo();
-    setIcon();
-    if (btn){
-      btn.addEventListener('click', () => {
-        const isLight = root.getAttribute('data-theme') === 'light';
-        if (isLight){
-          root.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          root.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-        }
-        applyLogo();
-        setIcon();
-      });
-    }
+    root.removeAttribute('data-theme'); // dark is default via :root
   })();
 
   const { gsap } = window;
