@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="reconstruction.css" />
+  <!-- Calendly inline widget begin -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>  <!-- Calendly badge widget end -->
 </head>
 <body>
   <header class="site-header">
@@ -17,6 +18,7 @@
       <a href="index.html" class="brand">
         <img src="photos/logo_ta.png" alt="Logo Tutoring Academia" class="logo-img">
       </a>
+      <button class="mobile-menu-btn" style="display: none;" aria-label="Menu mobile">☰</button>
       <nav class="nav">
         <a href="#devenir">La Transformation</a>
         <a href="#programme-detail">Le Programme</a>
@@ -32,48 +34,68 @@
     <section class="section hero-reconstruction" id="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <h1 class="tagline">En 90 jours, faites de votre enfant un <span>génie</span> capable de bâtir son avenir.</h1>
-          <p class="sub-headline">Il devient plus qu’un bon élève : il sait apprendre, s’exprimer, construire, résoudre, argumenter et s’organiser. Offrez-lui une longueur d’avance sur tous les autres.</p>
-          <a href="#cta-final" class="btn btn-primary btn-lg">Offrez cette transformation à votre enfant</a>
+          <div class="hero-card">
+            <h1 class="tagline souligne"><span>En 90 jours...</span> Faites de votre enfant un <span>Génie</span> capable de bâtir <span>son avenir.</span></h1>
+            <div class="hero-badges">
+              <span>Même s'il part de zéro</span> <span class="golden-text">||</span> <span>Même s'il manque de motivation</span> <span class="golden-text">||</span> <br><span>Quels que soient ses blocages</span>
+            </div>
+            <p class="sub-headline">Il devient plus qu'un bon élève : il sait apprendre, s'exprimer, construire, résoudre, argumenter et s'organiser. Offrez-lui une longueur d'avance sur tous les autres.</p>
+            <a href="#cta-final" class="btn btn-primary btn-lg">Offrez cette transformation à votre enfant</a>
+          </div>
         </div>
         <div class="hero-image">
-          <img src="photos/img_backgound.png" alt="Un enfant confiant et prêt à réussir">
-          <div class="float-badges" aria-hidden="true">
-            <span class="float-badge fb-1">Même s’il part <br> de zéro.</span>
-            <!-- <span class="float-badge fb-2">Même s’il manque <br> de motivation.</span> -->
-            <span class="float-badge fb-3">Quels que soient <br> ses blocages.</span>
-            <!-- <span class="float-badge fb-4">Même si vous êtes très <br> occupé.</span> -->
-          </div>
+          <img src="photos/logo_ta.png" style="border: 5px solid #06B6D4;" alt="Un enfant confiant et prêt à réussir">
         </div>
       </div>
     </section>
 
     <!-- CE QUE VOTRE ENFANT VA DEVENIR -->
-    <section class="section" id="devenir">
+    <section class="section devenir-enhanced" id="devenir">
       <div class="container">
         <div class="section-intro">
           <h2>Ce que votre enfant va devenir</h2>
-          <p>Reconstruction ne crée pas juste un enfant motivé. Il forge un <strong>esprit d’élite</strong>.</p>
+          <p><strong>Reconstruction</strong> ne crée pas juste un enfant motivé. Il forge un <strong>esprit d'élite</strong>.</p>
         </div>
         <div class="three-cards">
           <article class="card">
-            <img src="photos/img_1.jpg" alt="Mémoire et attention" class="card-img">
-            <h3>Croissance intellectuelle</h3>
-            <p>Mémoire affûtée, attention maîtrisée, autonomie dans l’apprentissage. L’enfant comprend vite, apprend mieux, devient stratège.</p>
+            <img src="photos/img_4.jpg" alt="Mémoire et attention" class="card-img">
+            <div class="card-content">
+              <h3>Croissance intellectuelle</h3>
+              <p>Mémoire affûtée, attention maîtrisée, <strong>autonomie</strong> dans l'apprentissage. L'enfant <strong>comprend vite</strong>, <strong>apprend mieux</strong>, devient stratège.</p>
+              <div class="card-highlight">
+                <span class="highlight-badge">🧠 Capacité d'analyse</span>
+              </div>
+            </div>
           </article>
           <article class="card">
             <img src="photos/img_2.png" alt="Compétences techniques" class="card-img">
-            <h3>Compétences concrètes</h3>
-            <p>Résolution de problèmes complexes, développement de projets écrits et créatifs, et la capacité à mener un projet du début à la fin.</p>
+            <div class="card-content">
+              <h3>Compétences concrètes</h3>
+              <p>Résolution de problèmes complexes, développement de <strong>projets intellectuels</strong>, amélioration massive de l'expression. L'enfant <strong>crée un portfolio de haut niveau</strong>.</p>
+              <div class="card-highlight">
+                <span class="highlight-badge">⚡ Projets réalisés</span>
+              </div>
+            </div>
           </article>
           <article class="card">
             <img src="photos/img_3.jpg" alt="Leadership et savoir-être" class="card-img">
-            <h3>Savoir-être et leadership</h3>
-            <p>Il parle en public, défend ses idées, mène une équipe. Et surtout : il aime à nouveau apprendre.</p>
+            <div class="card-content">
+              <h3>Savoir-être et leadership</h3>
+              <p>Il parle en public, défend ses idées, mène une équipe. Et surtout : <strong>il aime à nouveau apprendre</strong>.</p>
+              <div class="card-highlight">
+                <span class="highlight-badge">👑 Leader naturel</span>
+              </div>
+            </div>
           </article>
         </div>
-         <div class="center-block cta-block">
-            <a href="#cta-final" class="btn btn-secondary btn">Offrez cette transformation à votre enfant maintenant</a>
+        <div class="center-block cta-block enhanced-cta">
+          <div class="cta-buttons-group">
+            <a href="#cta-final" class="btn btn-primary btn-lg">OFFREZ cette transformation à votre enfant maintenant</a>
+            <button class="btn btn-secondary btn-lg" data-open-docs>
+              📄 Télécharger GRATUITEMENT les documents du programme
+            </button>
+          </div>
+          <p class="cta-subtitle">Découvrez le contenu complet et les ressources exclusives</p>
         </div>
       </div>
     </section>
@@ -82,33 +104,73 @@
     <section class="section alt-bg" id="constat">
         <div class="container-medium">
             <div class="section-intro">
-                <h2>Ce que vivent les enfants aujourd’hui</h2>
-                <p class="large-text">La vérité ? Nos enfants ne sont pas paresseux. <strong>Ils sont brisés.</strong></p>
+                <h2 class="section-title-with-icon">
+                    <img src="photos/warn.png" alt="Attention" class="title-icon" />
+                    Ce que vivent les enfants aujourd'hui
+                </h2>
+                <p class="large-text">&nbsp;&nbsp;&nbsp;La vérité ? Nos enfants ne sont pas paresseux. <strong>Ils sont brisés.</strong> par</p>
             </div>
-            <p>Brisés par des enseignants démotivés, traumatisés par une école qui abrutit, victimes de pédagogies archaïques, soumis à une pression constante, envahis par des influences numériques toxiques et dégoûtés par des cours vides de sens. Certains disent même : “L’école, c’est de la prison.”</p>
-            <p><strong>Ce n’est pas un simple décrochage. C’est une détresse FORTE qui s’installe… et chaque jour de plus est un risque effrayant pour nos enfants.</strong></p>
-            <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-secondary">L’urgence est Capital. C’est maintenant qu’il faut agir.</a>
+            <div class="constat-content">
+                <div class="constat-image">
+                    <img src="photos/img_sad.png" alt="Enfant en difficulté scolaire" class="constat-img">
+                </div>
+                <div class="constat-text-block">
+                    <div class="points-list avant-points">
+                        <p>❌Brisés par des enseignants démotivés, parfois violents, <strong>qui humilient au lieu d’élever.</strong></p>
+                        <p>❌Traumatisés par une école qui <strong>n’éveille rien</strong>, qui <strong>abrutit</strong> au lieu d’inspirer.</p>
+                        <p>❌Victimes de pédagogies archaïques, qui ne prennent <strong>aucunement en compte la nature humaine.</strong></p>
+                        <p>❌Soumis à une pression constante, sans outils, sans méthode, sans espoir.</p>
+                        <p>❌Envahis par des <strong>influences numériques toxiques</strong> : hypersexualisation, futilité, faux succès.</p>
+                        <p>❌Dégoûtés par des cours vides de sens. Certains disent même : “L’école, c’est de la prison.”</p>
+                    </div> <br><br>
+                    <p><strong>Ce n'est pas un simple décrochage. C'est une <strong>détresse FORTE</strong> qui s'installe… et chaque jour de plus est un <strong>risque effrayant pour nos enfants.</strong></strong></p>
+                    <div class="constat-cta">
+                        <a href="#cta-final" class="btn btn-primary">L'urgence est Capital. C'est maintenant qu'il faut agir.</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CRISE FAMILIALE -->
-    <section class="section">
+    <section class="section" id="crise-familiale">
         <div class="container-medium">
             <div class="section-intro">
-                <h2>Ce n’est pas qu’un problème d’enfant… C’est toute la famille qui paie le prix.</h2>
+                <h2>Ce n'est pas qu'un problème d'enfant… <span style="color: red; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">C'est toute la famille qui paie le prix.</span></h2>
             </div>
-            <ul>
-                <li>Vous investissez des millions à l’université pour un avenir incertain.</li>
-                <li>L’angoisse vous suit chaque jour : “Est-ce qu’il va s’en sortir ?”</li>
-                <li>L’école semble aller à l’encontre de vos valeurs.</li>
-                <li>Le monde change trop vite et vous doutez de l’éducation traditionnelle.</li>
-                <li>Vous cherchez quelque chose de plus profond, qui développe réellement l’intelligence et les valeurs.</li>
-            </ul>
-            <p>Ce n’est pas un simple problème de paresse. C’est une crise de sens, de méthode et d’avenir. Mais il existe une voie de sortie. Une vraie.</p>
+            <div class="crisis-points">
+                <div class="crisis-item">
+                    <span class="crisis-icon">💰</span>
+                    <p>Vous investissez des millions à l'université pour un avenir incertain.</p>
+                </div>
+                <div class="crisis-item">
+                    <span class="crisis-icon">😰</span>
+                    <p>L'angoisse vous suit chaque jour : "Est-ce qu'il va s'en sortir ?"</p>
+                </div>
+                <div class="crisis-item">
+                    <span class="crisis-icon">⚖️</span>
+                    <p>L'école semble aller à l'encontre de vos valeurs.</p>
+                </div>
+                <div class="crisis-item">
+                    <span class="crisis-icon">😵‍💫</span>
+                    <p>Le monde change trop vite… et très souvent dans le mauvais sens. Comment réagir face à la technologie, les réseaux, les nouveaux codes ?</p>
+                </div>
+                
+                <div class="crisis-item">
+                    <span class="crisis-icon">🧐</span>
+                    <p>Vous doutez de plus en plus de l’éducation traditionnelle. 
+                    Vous sentez qu’elle atteint ses limites. Qu’elle forme des exécutants, pas des esprits 
+                    éveillés.</p>
+                </div>
+                
+                <div class="crisis-item">
+                    <span class="crisis-icon">😮</span>
+                    <p>Vous cherchez quelque chose de plus profond, qui développe réellement l'intelligence et les valeurs.</p>
+                </div>
+            </div>
+            <p class="crisis-conclusion">Ce n'est pas un simple problème de paresse. C'est une crise de sens, de méthode et d'avenir. Mais il existe une voie de sortie. Une vraie.</p>
              <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-secondary">Assez perdu de temps. C’est maintenant qu’il faut agir.</a>
+                <a href="#cta-final" class="btn btn-secondary">Assez perdu de temps. C'est maintenant qu'il faut agir.</a>
             </div>
         </div>
     </section>
@@ -117,26 +179,182 @@
     <section class="section alt-bg" id="programme-detail">
       <div class="container">
         <div class="section-intro">
-          <h2>Ce que fait concrètement Reconstruction</h2>
-          <p>Ce n’est pas du soutien scolaire. C’est une transformation multidimensionnelle, pensée pour un impact durable.</p>
+          <h2>Ce que fait concrètement <span class="golden-text">Reconstruction</span></h2>
+          <p>Ce n'est pas du soutien scolaire. C'est une <strong>transformation multidimensionnelle</strong>, pensée pour un impact durable.</p>
         </div>
-        <div class="three-cards">
-          <article class="card">
-            <h3>Pilier 1 : Fondations humaines et cognitives</h3>
-            <p>Développement de la mémoire, de la concentration, de l’organisation mentale. On redonne à l’enfant le goût d’apprendre et de comprendre.</p>
+        <div class="program-pillars">
+          <article class="pillar-card">
+            <div class="pillar-number">1</div>
+            <div class="pillar-content">
+              <h3>On renforce ses fondations humaines et cognitives</h3>
+              <p>Développement de la mémoire active, de la concentration, de l’organisation mentale. 
+                Apprentissage des fondamentaux scientifiques et des outils mentaux avancés. 
+                Rééducation cérébrale : on redonne à l’enfant le goût d’apprendre et de comprendre. </p>
+              <ul class="pillar-features">
+                <li>✓ Techniques de mémorisation avancées</li>
+                <li>✓ Développement de la concentration</li>
+                <li>✓ Organisation mentale structurée</li>
+              </ul>
+            </div>
           </article>
-          <article class="card">
-            <h3>Pilier 2 : Compétences d’élite</h3>
-            <p>Résolution d’exercices complexes, développement de projets intellectuels, amélioration massive de l'expression. L'enfant crée un portfolio de haut niveau.</p>
+          <article class="pillar-card">
+            <div class="pillar-number">2</div>
+            <div class="pillar-content">
+              <h3>On développe ses compétences d’élite</h3>
+              <p>Résolution d’exercices complexes en mathématiques. 
+                Développement de projets intellectuels structurés : analyses, exposés, productions. 
+                Amélioration en expression écrite, orale, argumentative. 
+                L’enfant crée un portfolio personnel de haut niveau, valorisable au niveau
+                international et sur les marchés de l’emploi.</p>
+              <ul class="pillar-features">
+                <li>✓ Projets intellectuels concrets</li>
+                <li>✓ Portfolio de réalisations</li>
+                <li>✓ Expression écrite et orale</li>
+              </ul>
+            </div>
           </article>
-          <article class="card">
-            <h3>Pilier 3 : Identité, éthique et posture</h3>
-            <p>Éducation comportementale exigeante, développement d’une identité forte. L’enfant devient une source de fierté et un exemple.</p>
+          <article class="pillar-card">
+            <div class="pillar-number">3</div>
+            <div class="pillar-content">
+              <h3> On bâtit son identité, son éthique, sa posture </h3>
+              <p>Éducation comportementale exigeante : bonnes manières, respect, capacité à se situer. 
+                Développement d’une identité forte : un enfant fier, responsable, lucide. 
+                L’enfant devient source de fierté pour ses parents, et un exemple pour les autres. 
+                Introduction aux métiers d’avenir : une formation qui anticipe les grandes mutations 
+                du monde.</p>
+              <ul class="pillar-features">
+                <li>✓ Leadership et confiance en soi</li>
+                <li>✓ Valeurs et éthique solides</li>
+                <li>✓ Posture d'excellence</li>
+              </ul>
+            </div>
           </article>
         </div>
-        <div class="center-block cta-block">
-            <p>Ce programme est le pont entre le génie intérieur de l’enfant… et sa révélation au monde.</p>
-            <a class="btn btn-primary" href="#cta-final">Découvrir le contenu complet du programme</a>
+        <div class="program-cta">
+          <p class="program-tagline">Ce programme est le pont entre le génie intérieur de l'enfant… et sa révélation au monde.</p>
+          <div class="cta-buttons-group">
+            <a class="btn btn-primary btn-lg" href="#cta-final">Découvrir le contenu complet du programme</a>
+            <button class="btn btn-secondary btn-lg" data-open-docs>
+              📄 Télécharger les documents du programme
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARROUSEL ENFANTS -->
+    <section class="section" id="enfants-carousel">
+      <div class="container-large">
+        <div class="section-intro">
+          <h2 class="golden-text">Ils méritent mieux</h2>
+          <p class="large-text">Un aperçu de la réalité de nos enfants aujourd'hui.</p>
+        </div>
+        <div class="enfants-carousel">
+          <div class="enfants-track" id="enfants-track">
+            <div class="enfant-item">
+              <img src="enfants/e1.jpg" alt="Enfant 1" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e2.JPG" alt="Enfant 2" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e3.png" alt="Enfant 3" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e4.png" alt="Enfant 4" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e5.jpg" alt="Enfant 5" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e7.jpg" alt="Enfant 7" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e8.jpg" alt="Enfant 8" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e9.jpg" alt="Enfant 9" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e10.jpg" alt="Enfant 10" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e11.jpg" alt="Enfant 11" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e12.png" alt="Enfant 12" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e13.png" alt="Enfant 13" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e14.png" alt="Enfant 14" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e15.png" alt="Enfant 15" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e16.jpg" alt="Enfant 16" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e17.jpg" alt="Enfant 17" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e18.jpg" alt="Enfant 18" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e19.jpg" alt="Enfant 19" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e20.jpg" alt="Enfant 20" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e21.jpg" alt="Enfant 21" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e22.jpg" alt="Enfant 22" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e23.jpg" alt="Enfant 23" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e24.jpg" alt="Enfant 24" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e25.jpg" alt="Enfant 25" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e26.jpg" alt="Enfant 26" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e27.jpg" alt="Enfant 27" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e28.jpg" alt="Enfant 28" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e29.jpg" alt="Enfant 29" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e30.jpg" alt="Enfant 30" loading="lazy" />
+            </div>
+            <!-- Duplication pour boucle infinie -->
+            <div class="enfant-item">
+              <img src="enfants/e1.jpg" alt="Enfant 1" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e2.JPG" alt="Enfant 2" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e3.png" alt="Enfant 3" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e4.png" alt="Enfant 4" loading="lazy" />
+            </div>
+            <div class="enfant-item">
+              <img src="enfants/e5.jpg" alt="Enfant 5" loading="lazy" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -144,21 +362,52 @@
     <!-- GARANTIE -->
     <section class="section guarantee-section">
         <div class="container-medium">
-            <div class="section-intro">
-                <h2>Une double garantie pour vous rassurer</h2>
-                <p>Nous savons que c'est une décision importante. C'est pourquoi nous avons conçu une double garantie béton, qui vous permet d’intégrer le programme en toute confiance.</p>
-            </div>
-            <div class="guarantee-box">
-                <div class="guarantee-item">
-                    <h3>Garantie 1 : Satisfait ou remboursé sous 14 jours</h3>
-                    <p>Testez le programme pendant 14 jours complets. Si vous sentez que ce programme ne vous convient pas, un simple message suffit pour un remboursement intégral. Aucune justification à fournir.</p>
+            <div class="guarantee-unified-block">
+                <div class="guarantee-header">
+                    <h2>Une double garantie <strong>incroyable</strong></h2>
                 </div>
-                <div class="guarantee-item">
-                    <h3>Garantie 2 : Progrès visibles ou remboursement sous 90 jours</h3>
-                    <p>Si votre enfant a suivi le programme et que vous ne constatez aucun progrès dans sa méthode, sa concentration ou son implication, vous pouvez demander un remboursement intégral.</p>
+                <div class="guarantee-logo">
+                    <img src="photos/guarantee.png" class="guarantee-logo" alt="Logo garantie">
+                </div>
+                <div class="guarantee-content">
+                    <div class="guarantee-intro">
+                        <p>Nous savons à quel point choisir un programme pour son enfant est une décision 
+                            importante. Et nous savons surtout que chaque parent veut faire le bon choix pour offrir à 
+                            son enfant une vraie chance de progresser, de s’épanouir et de réussir. 
+                            C’est pourquoi nous avons conçu une double garantie béton, qui vous permet d’intégrer le 
+                            programme Reconstruction en toute confiance, sans pression. </p>
+                    </div>
+                    
+                    <div class="guarantee-item">
+                        <h3><span class="guarantee-number">Garantie 1 :</span> Satisfait ou remboursé de 14 jours.</h3>
+                        <p>Testez le programme pendant <strong>14 jours complets</strong>. 
+                            Votre enfant pourra : 
+                            <ul>
+                                <li>Participer aux premiers coachings</li>
+                                <li>Découvrir les méthodes</li>
+                                <li>Commencer à structurer son projet personnel</li>
+                                <li>Et interagir avec des enfants brillants et motivés</li>
+                            </ul>
+                            Si après ces 14 jours vous sentez que ce programme ne vous convient pas, il suffit d’un 
+                            simple message pour demander un remboursement intégral. 
+                            Aucune justification à fournir. Aucun stress. </p>
+                    </div>
+                    
+                    <div class="guarantee-item">
+                        <h3><span class="guarantee-number">Garantie 2 :</span> Résultats ou remboursé sur 90 jours.</h3>
+                        <p>Si votre enfant a participé régulièrement aux séances, remis ses productions, et suivi le 
+                            programme tel que prévu, alors nous vous offrons une garantie exceptionnelle : 
+                            Si au bout de <strong>90 jours</strong> : 
+                            <ul>
+                                <li>Vous ne constatez aucun progrès dans sa méthode de travail</li>
+                                <li>Aucune évolution dans sa capacité à se concentrer, à s’organiser ou à comprendre ses leçons</li>
+                                <li>Ou s’il ne s’implique dans aucun projet académique concret</li>
+                            </ul>
+                            Vous pouvez demander un remboursement intégral. 
+                            Parce que notre responsabilité, c’est aussi de garantir des résultats concrets.</p>
+                    </div>
                 </div>
             </div>
-            <p class="bonus-guarantee"><strong>Bonus :</strong> Même en cas de remboursement, tous les kits pédagogiques, masterclass et outils reçus resteront à votre disposition.</p>
         </div>
     </section>
 
@@ -166,40 +415,81 @@
     <section class="section alt-bg" id="outils">
         <div class="container">
             <div class="section-intro">
-                <h2>Les outils exclusifs et l’accompagnement</h2>
-                <p>Un bon outil seul ne suffit pas. Reconstruction met entre les mains de votre enfant des ressources puissantes et un encadrement structuré et humain.</p>
+                <h2>Les outils exclusifs et l'accompagnement</h2>
+                <p>Un bon outil seul ne suffit pas. <strong>Reconstruction</strong> met entre les mains de votre enfant des ressources puissantes et un encadrement structuré et humain.</p>
             </div>
-            <div class="two-cols">
-                <div>
-                    <h3>Un accompagnement humain, constant et stratégique</h3>
-                    <ul>
-                        <li>Séances de coaching individuelles et de groupe.</li>
-                        <li>Écoute active et mentorat par des experts certifiés.</li>
-                        <li>Un environnement stimulant, joyeux et orienté excellence.</li>
-                    </ul>
-                    <h3>Des projets concrets, utiles, valorisants</h3>
-                    <ul>
-                        <li><strong>Projet La Plume d’Or :</strong> l’enfant rédige et publie son propre livre.</li>
-                        <li><strong>Olympiades et compétitions internationales.</strong></li>
-                        <li><strong>Portfolio de projets</strong> pour prouver ses nouvelles compétences.</li>
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <div class="tool-icon">👥</div>
+                    <h3>Accompagnement humain, constant et stratégique</h3>
+                    <ul class="tool-features">
+                        <li>Séances de coaching individuelles : pour comprendre en profondeur chaque enfant, ses blocages, ses forces et construire un accompagnement 100% adapté.</li>
+                        <li>Séances de coaching de groupe : pour dynamiser la motivation, cultiver l’esprit d’équipe, apprendre à se dépasser ensemble, et s’inspirer des réussites des autres.</li>
+                        <li>Écoute active et mentorat : chaque enfant est suivi, encouragé et challengé par des professionnels bienveillants.</li>
+                        <li>Encadrement par des experts certifiés en pédagogie, accompagnement académique et développement personnel, membres officiels de Tutoring Academia.</li>
                     </ul>
                 </div>
-                <div>
-                    <h3>Des outils concrets, simples, mais puissants</h3>
-                    <ul>
-                        <li>Roadmap complète de la mémorisation.</li>
-                        <li>Calendrier de révision façon Lietner.</li>
-                        <li>Templates intelligents de planification.</li>
-                        <li>Guide stratégique de concentration et fiches d’analyse d’erreurs.</li>
-                        <li>Un Certificat de Soutien Académique délivré en fin de parcours.</li>
+                <div class="tool-category">
+                    <div class="tool-icon">🌍</div>
+                    <h3>Un environnement stimulant, joyeux et orienté excellence</h3><br><br>
+                    <ul class="tool-features">
+                        Votre enfant évolue dans un cadre d'enfants motivant, positif, collaboratif : 
+                        <li>des enfants qui aiment apprendre, </li>
+                        <li>qui se soutiennent, </li>
+                        <li>qui se challengent dans la bonne humeur, </li>
+                        <li>qui sont fiers de réussir. </li>
+                        <li>Il apprend à être heureux dans l’effort, fier de ses progrès, capable de relever des 
+                        défis toujours plus ambitieux. </li>
                     </ul>
                 </div>
-            </div>
-            <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-secondary">Je veux que mon enfant ait les bons outils ET le bon accompagnement</a>
+                <div class="tool-category">
+                    <div class="tool-icon">🛠️</div>
+                    <h3>Outils concrets, simples, mais puissants</h3>
+                    <ul class="tool-features">
+                        <li>Roadmap complète de la mémorisation : toutes les techniques pour apprendre vite et retenir longtemps.</li>
+                        <li>Calendrier de révision façon Lietner : pour automatiser la mémoire active et optimiser les répétitions.</li>
+                        <li>Templates intelligents de planification : emploi du temps, routines, objectifs, le tout personnalisable.</li>
+                        <li>Guide stratégique de concentration : comment bloquer les distractions, créer un espace mental clair, et rester focus.</li>
+                        <li>Tableaux d’évaluation personnelle : votre enfant apprend à s’auto-corriger, à s’améliorer, à s’élever.</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <div class="tool-icon">🎯</div>
+                    <h3>Un Certificat de Soutien Académique délivré en fin de parcours</h3>
+                    <ul class="tool-features">
+                        <li>Un certificat officiel attestant des efforts, des compétences acquises et du niveau atteint.</li>
+                        <li>Ce document valorise son parcours et peut être joint à son dossier scolaire ou personnel comme preuve d’excellence et de progression.</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <div class="tool-icon">📦</div>
+                    <h3>Quelques ressources incluses dans le programme :</h3>
+                    <ul class="tool-features">
+                        <li>Fiches-outils de concentration et mémorisation</li>
+                        <li>Fichiers de diagnostic de niveau (avant/après)</li>
+                        <li>Cahiers d’expression écrite et d’argumentation</li>
+                        <li>Guides de méthodologie de recherche</li>
+                        <li>Outils de suivi de projets et de leadership</li>
+                        <li>Templates de journal de bord personnel</li>
+                        <li>Tableaux de reporting parental</li>
+                    </ul>
+                </div>
+                <div class="tool-category">
+                    <div class="tool-icon">🚀</div>
+                    <h3>Projets concrets, utiles, valorisants</h3>
+                    <ul class="tool-features">
+                        <li>Projet La Plume d’Or : l’enfant rédige et publie son propre livre. Une expérience 
+                        marquante pour sa confiance, son expression et sa créativité.</li>
+                        <li>Olympiades et compétitions internationales : des épreuves valorisantes qui 
+                        révèlent le génie et nourrissent l’esprit de performance.</li>
+                        <li>Portfolio de projets intellectuels et professionnels : chaque élève repart avec des 
+                        preuves concrètes de ses nouvelles compétences, utiles pour le futur.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- BONUS -->
     <section class="section" id="bonus">
@@ -208,20 +498,218 @@
                 <h2>Bonus exclusifs réservés aux participants</h2>
                 <p>Des bonus à très haute valeur ajoutée, conçus pour déclencher une transformation profonde et durable.</p>
             </div>
-            <div class="bonus-grid">
-                <div class="bonus-card"><strong>Bonus 1:</strong> Accès à une IA éducative personnalisée.</div>
-                <div class="bonus-card"><strong>Bonus 2:</strong> Coachings métiers avec des professionnels.</div>
-                <div class="bonus-card"><strong>Bonus 3:</strong> Accès à un réseau de mentors exceptionnels.</div>
-                <div class="bonus-card"><strong>Bonus 4:</strong> Formations professionnalisantes (code, vidéo...).</div>
-                <div class="bonus-card"><strong>Bonus 5:</strong> Masterclass Concentration en Environnement Hostile.</div>
-                <div class="bonus-card"><strong>Bonus 6:</strong> Kit visuel de planification express.</div>
-                <div class="bonus-card"><strong>Bonus 7:</strong> Mini-guide TDAH et besoins spécifiques.</div>
-                <div class="bonus-card"><strong>Bonus 8:</strong> Fiches d’expression et de débats.</div>
-                <div class="bonus-card"><strong>Bonus 9:</strong> Module spécial “Projet personnel”.</div>
-                <div class="bonus-card"><strong>Bonus 10:</strong> Accès à vie aux ressources du programme.</div>
+            <div class="bonus-grid-new">
+                <div class="bonus-row">
+                    <div class="bonus-item" data-bonus="1">
+                        <div class="bonus-number">01</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 1 <span>:Accès à une IA éducative personnalisée.</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5>Accès à une intelligence artificielle éducative personnalisée</h5>
+                                <p class="tooltip-value">Valeur : 100 000 FCFA</p>
+                                <div class="tooltip-description">
+                                    <p>Une IA conçue pour l'aider à :</p>
+                                    <ul>
+                                        <li>comprendre ses cours plus rapidement</li>
+                                        <li>reformuler ses leçons</li>
+                                        <li>répondre à ses questions scolaires</li>
+                                        <li>s'entraîner en autonomie</li>
+                                        <li>corriger ses productions</li>
+                                    </ul>
+                                    <p>Cet outil intelligent deviendra son allié au quotidien, pour ne plus jamais rester bloqué. Disponible en version sécurisée et pédagogique, cette IA est formée sur les contenus académiques et enrichie par nos experts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item" data-bonus="2">
+                        <div class="bonus-number">02</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 2 <span>:Coachings métiers avec des professionnels.</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5>Coachings métiers avec des professionnels de haut niveau</h5>
+                                <p class="tooltip-value">Valeur inestimable</p>
+                                <div class="tooltip-description">
+                                    <p>Votre enfant bénéficie de rencontres régulières avec des experts reconnus :</p>
+                                    <ul>
+                                        <li>chefs d'entreprise</li>
+                                        <li>ingénieurs</li>
+                                        <li>professionnels de la finance, du droit, du digital</li>
+                                        <li>créateurs et innovateurs du monde réel</li>
+                                    </ul>
+                                    <p><strong>Objectif :</strong> découvrir les métiers d'avenir, comprendre le monde professionnel dès le plus jeune âge, s'inspirer de parcours concrets, se projeter avec ambition et clarté.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-row">
+                    <div class="bonus-item" data-bonus="3">
+                        <div class="bonus-number">03</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.2rem;">Bonus 3 <span>:Accès à un réseau de mentors exceptionnels.</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5>Accès à un <span style="color: goldenrod">réseau de mentors exceptionnels</span></h5>
+                                <div class="tooltip-description">
+                                    <p>Chaque enfant est mis en relation avec des mentors inspirants, soigneusement sélectionnés pour leur bienveillance, leur réussite et leur désir de transmission.</p>
+                                    <p>Un bon mentor peut changer une vie. C'est un cadeau que l'argent seul ne peut pas acheter. C'est aussi une manière de bâtir un réseau solide pour l'avenir, et de toujours avoir quelqu'un vers qui se tourner.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item" data-bonus="4">
+                        <div class="bonus-number">04</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1rem;">Bonus 4 <span>:Formations professionnalisantes exclusives.</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5>Accès exclusif à des <span style="color: goldenrod">Formations professionnalisantes</span></h5>
+                                <div class="tooltip-description">
+                                    <p>Votre enfant pourra intégrer en priorité à nos formations concrètes pour développer des compétences très recherchées :</p>
+                                    <ul>
+                                        <li>Montage vidéo</li>
+                                        <li>Initiation à la programmation et à l'intelligence artificielle</li>
+                                        <li>Prise de parole en public & art oratoire</li>
+                                        <li>Création de contenus et storytelling numérique</li>
+                                        <li>Initiation à l'analyse de données</li>
+                                        <li>Et d'autres modules exclusifs sélectionnés selon les tendances</li>
+                                    </ul>
+                                    <p>Ces compétences préparent votre enfant à exceller dans le monde réel, à développer très tôt des compétences rares et valorisées. Les meilleurs seront orientés vers des compétitions internationales et les meilleures universités du monde.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-row">
+                    <div class="bonus-item" data-bonus="5">
+                        <div class="bonus-number">05</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 5 <span>:Masterclass Concentration</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5>Masterclass Concentration <span style="color: goldenrod">en Environnement Hostile</span></h5>
+                                <div class="tooltip-description">
+                                    <p>Un cours inédit pour apprendre à se concentrer dans le bruit, le stress, ou l'agitation quotidienne.</p>
+                                    <p>Parce que le monde n'est pas toujours calme, il faut savoir créer sa bulle de performance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item" data-bonus="6">
+                        <div class="bonus-number">06</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 6 <span>:Kit visuel de planification express.</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5>Kit visuel de <span style="color: goldenrod">planification express</span></h5>
+                                <div class="tooltip-description">
+                                    <p>Un pack illustré et simple pour organiser ses journées en moins de 5 minutes :</p>
+                                    <ul>
+                                        <li>emploi du temps</li>
+                                        <li>suivi d'objectifs</li>
+                                        <li>rappels visuels</li>
+                                    </ul>
+                                    <p><strong>Résultat :</strong> moins de stress, plus d'action, plus de résultats.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bonus-row">
+                    <div class="bonus-item" data-bonus="7">
+                        <div class="bonus-number">07</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 7 <span>:Mini-guide TDAH et besoins spécifiques.</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5 style="color: goldenrod">Mini-guide TDAH et besoins spécifiques</h5>
+                                <div class="tooltip-description">
+                                    <p>Inclus dans tous les parcours :</p>
+                                    <ul>
+                                        <li>astuces concrètes pour les enfants impulsifs, distraits ou atypiques</li>
+                                        <li>solutions douces et efficaces pour s'organiser sans souffrir</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item" data-bonus="8">
+                        <div class="bonus-number">08</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 8 <span>:Fiches d'expression et de débats.</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5 style="color: goldenrod">Fiches d'expression et de débats</h5>
+                                <div class="tooltip-description">
+                                    <p>L'art de parler, d'écrire, de convaincre :</p>
+                                    <ul>
+                                        <li>pour les concours</li>
+                                        <li>les exposés</li>
+                                        <li>les projets oraux</li>
+                                        <li>ou simplement… oser s'exprimer dans un monde trop bruyant</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item" data-bonus="9">
+                        <div class="bonus-number">09</div>
+                        <div class="bonus-card-new">
+                            <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 9: <span>Accès à vie aux ressources du programme 
+                              Reconstruction</span></h4>
+                        </div>
+                        <div class="bonus-tooltip">
+                            <div class="tooltip-content">
+                                <h5 style="color: goldenrod">Accès à vie aux ressources du programme Reconstruction</h5>
+                                <div class="tooltip-description">
+                                    <p>L'enfant garde un accès illimité et permanent à :</p>
+                                    <ul>
+                                        <li>tous les outils pédagogiques, </li>
+                                        <li>toutes les vidéos explicatives,</li>
+                                        <li>tous les templates, </li>
+                                        <li>tous les guides & supports du programme.</li>
+                                    </ul>
+                                    <p>Même après les 90 jours, il peut y revenir à tout moment. 
+                                      Pour se remettre à niveau, approfondir, réviser… ou même aider d'autres à son tour. 
+                                      C'est un investissement qui ne s'efface jamais. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bonus-item" data-bonus="10">
+                      <div class="bonus-number">10</div>
+                      <div class="bonus-card-new">
+                          <h4 style="text-transform: uppercase; font-size: 1.3rem;">Bonus 10: <span>Module spécial "Projet personnel".</span></h4>
+                      </div>
+                      <div class="bonus-tooltip">
+                          <div class="tooltip-content">
+                              <h5 style="color: goldenrod">Module spécial "Projet personnel"</h5>
+                              <div class="tooltip-description">
+                                  <p>Chaque enfant crée son propre projet :</p>
+                                  <ul>
+                                      <li>idée, conception, exécution, présentation</li>
+                                      <li>soutenance finale devant un public ou un jury</li>
+                                      <li>portfolio professionnel</li>
+                                  </ul>
+                                  <p>Un entraînement ultra complet à la prise d'initiative, au leadership et à la valorisation de ses talents.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
             </div>
-            <div class="center-block cta-block">
-                <a href="#cta-final" class="btn btn-primary">Je veux que mon enfant bénéficie aussi de ces bonus exceptionnels</a>
+            <div class="bonus-cta-section">
+                <a href="#cta-final" class="btn btn-primary">Je m'inscris au programme Reconstruction</a>
             </div>
         </div>
     </section>
@@ -229,29 +717,75 @@
     <!-- AVANT/APRES -->
     <section class="section alt-bg" id="avant-apres">
         <div class="container">
-            <div class="two-cols-compare">
-                <div class="avant">
-                    <h3>AVANT</h3>
-                    <p>La réalité que vivent beaucoup de familles :</p>
-                    <ul>
-                        <li>Enfants démotivés, perdus, qui se renferment.</li>
-                        <li>Difficultés à suivre, échecs malgré les efforts.</li>
-                        <li>Bases fragiles, manque de concentration, procrastination.</li>
-                        <li>Comportement inquiétant, parents épuisés et angoissés.</li>
-                        <li>Sentiment que le système éducatif est dépassé.</li>
-                    </ul>
+            <div class="section-intro">
+                <h2>La transformation en 90 jours</h2>
+                <p>Découvrez le contraste saisissant entre la situation actuelle et les résultats obtenus.</p>
+            </div>
+            <div class="transformation-container">
+                <div class="avant-section">
+                    <div class="status-badge avant-badge">AVANT</div>
+                    <h3>La réalité que vivent beaucoup de familles</h3>
+                    <div class="points-list avant-points">
+                        <div class="point-item">
+                            <span class="point-icon negative">❌</span>
+                            <p>Enfants démotivés, perdus, qui se renferment</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon negative">❌</span>
+                            <p>Difficultés à suivre, échecs malgré les efforts</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon negative">❌</span>
+                            <p>Bases fragiles, manque de concentration, procrastination</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon negative">❌</span>
+                            <p>Comportement inquiétant, parents épuisés et angoissés</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon negative">❌</span>
+                            <p>Sentiment que le système éducatif est dépassé</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="apres">
-                    <h3>APRÈS</h3>
-                    <p>Ce que nous construisons en 90 jours :</p>
-                    <ul>
-                        <li>Un enfant confiant, qui sait où il va.</li>
-                        <li>Des résultats visibles, une expression claire.</li>
-                        <li>Un portfolio concret de projets réalisés.</li>
-                        <li>Capacité à planifier, organiser, résoudre des problèmes.</li>
-                        <li>Un comportement fiable, respectueux et ouvert.</li>
-                        <li>Parents fiers et certains que leur enfant est sur la bonne voie.</li>
-                    </ul>
+                
+                <div class="transition-arrow">
+                    <div class="arrow-container">
+                        <div class="arrow-line"></div>
+                        <div class="arrow-head">➤</div>
+                        <div class="transformation-label">TRANSFORMATION</div>
+                    </div>
+                </div>
+                
+                <div class="apres-section">
+                    <div class="status-badge apres-badge">APRÈS</div>
+                    <h3>Ce que nous construisons en 90 jours</h3>
+                    <div class="points-list apres-points">
+                        <div class="point-item">
+                            <span class="point-icon positive">✅</span>
+                            <p>Un enfant confiant, qui sait où il va</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon positive">✅</span>
+                            <p>Des résultats visibles, une expression claire</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon positive">✅</span>
+                            <p>Un portfolio concret de projets réalisés</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon positive">✅</span>
+                            <p>Capacité à planifier, organiser, résoudre des problèmes</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon positive">✅</span>
+                            <p>Un comportement fiable, respectueux et ouvert</p>
+                        </div>
+                        <div class="point-item">
+                            <span class="point-icon positive">✅</span>
+                            <p>Parents fiers et certains que leur enfant est sur la bonne voie</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -261,27 +795,53 @@
     <section class="section" id="temoignages">
         <div class="container">
             <div class="section-intro">
-                <h2>Témoignages & preuves sociales</h2>
+                <h2>Témoignages</h2>
                 <p>Il n’y a rien de plus convaincant que les résultats vécus par d’autres parents comme vous.</p>
-            </div>
+            </div><br><br><br><br>
             <div class="testimonials">
                 <article class="testimonial-card">
-                    <img src="photos/img_4.jpg" alt="Parent satisfait">
-                    <p>“Je ne vais pas mentir, j’étais vraiment sous une pression énorme. L’enfant avait rejeté l’école. [...] J’ai vu un changement dès la première semaine. Elle ne râlait plus. Elle s’y donnait vraiment. Et elle a même réussi ce concours du premier coup alors que même son établissement prédisait son échec.”</p>
+                    <img src="photos/parent2.png" alt="Parent satisfait">
+                    <p>“Je ne vais pas mentir, quand j’ai inscrit ma fille dans le programme 
+                        Reconstruction, j’étais vraiment sous une pression énorme. L’enfant avait 
+                        rejeté l’école. Elle n’aimait pas lire, elle refusait qu’on lui dise quoi faire. Et 
+                        pourtant, je voulais absolument qu’elle fasse un concours d’élite. 
+                        Mais une fois qu’elle a été soumise au programme, j’ai vu un changement 
+                        dès la première semaine. Elle ne râlait plus. Elle s’y donnait vraiment. Et 
+                        je voyais surtout qu’elle aimait ce qu’elle faisait.” 
+                        “Et elle a même réussi ce concours du premier coup alors que même son 
+                        établissement prédisait son échec.””</p>
                     <footer>
                         <strong>Madame Jeanine</strong>
-                        <span>Agent de voyage</span>
+                        <span>Agent de voyage pour une compagnie aérienne</span>
                     </footer>
                 </article>
                 <article class="testimonial-card">
-                    <img src="photos/img_5.JPG" alt="Parent satisfait">
-                    <p>“Avant, mes enfants avaient déjà de bonnes notes. Mais je ne voyais pas de véritable méthode. [...] Quand ils ont intégré, le programme a commencé par leur inculquer la méthode et tout est allé très vite. Ils ont écrit un livre, conçu des Chatbots, des projets que même à 25 ans beaucoup n’ont pas encore réalisés.”</p>
+                    <img src="photos/parent1.jpg" alt="Parent satisfait">
+                    <p>“Avant de commencer le programme, mes enfants avaient déjà de bonnes 
+                        notes. Mais je ne voyais pas de véritable méthode dans leur façon de 
+                        travailler et ça m’inquiétait un peu pour la suite de leur parcours 
+                        académique.” 
+                        “Quand ils ont intégré, le programme a commencé par leur inculquer la 
+                        méthode de travail adéquate, et de là tout est allé très vite. Ils 
+                        enchaînaient les 18 et 20 sur 20.” 
+                        “Mais ce que j’ai le plus admiré, c’est l’éveil d’esprit que le programme a 
+                        suscité en eux. Ils ont écrit un livre de A à Z, conçu des Chatbots, des 
+                        projets que même à 25 ans beaucoup n’ont pas encore réalisés.”</p>
                     <footer>
                         <strong>Madame Ernestine</strong>
                         <span>Maître de conférences, Université de Yaoundé 1</span>
                     </footer>
                 </article>
-            </div>
+                <article class="testimonial-card">
+                    <img src="enfants/e12.png" alt="Parent satisfait">
+                    <p>“Franchement, je ne pensais pas qu’un programme comme ça pouvait exister. J’ai toujours aimé apprendre, mais là… c’était différent. Chaque projet était incroyable. Je me suis entraîné sur des maths de très haut niveau, et au lieu d’avoir peur, j’ai adoré. Et le chatbot… au début, je pensais que c’était un truc compliqué pour les ingénieurs. Mais en fait, c’était plus simple que je croyais. J’ai appris. J’ai compris. Et je l’ai fait. Moi-même, je ne réalise pas encore tout ce que j’ai accompli. Mdr...😅😅😅
+                    <br>
+                    Merci à ma famille de m’avoir permis de vivre ça. Je suis fier de faire partie de cette aventure. Et encore plus fier de la personne que je suis en train de devenir.
+                <footer>
+                    <strong>ZONDEGOUMBA Tatsinkou Dany</strong>
+                    <span>Élève en classe de 3e</span>
+                </footer>
+            </article>
         </div>
     </section>
 
@@ -318,12 +878,94 @@
         </div>
     </section>
 
+  </section>
+
+  <!-- PRICING SECTION -->
+  <section class="section pricing-section" id="tarifs">
+      <div class="container">
+          <div class="section-intro">
+              <h2>PROGRAMME RECONSTRUCTION</h2>
+              <p class="pricing-subtitle">⏳ DURÉE : 3 MOIS</p>
+          </div>
+          
+          <div class="pricing-grid">
+              <!-- Silver Plan -->
+              <div class="pricing-card silver">
+                  <div class="pricing-header">
+                      <div class="plan-icon">
+                          <img src="images/silver.png" alt="Silver Plan" class="plan-image">
+                      </div>
+                      <h3>Silver</h3>
+                      <div class="plan-currency">FCFA / €</div>
+                      <div class="plan-price">398 000 / 749.99</div>
+                  </div>
+                  <div class="pricing-features">
+                      <div class="feature-item">ACCÈS À L'ACCOMPAGNEMENT PACK 1</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES DE COACHING DE PROGRESSION INDIVIDUELLE</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES DE OPTIMISATION MENTALE</div>
+                      <div class="feature-item">ACCÈS AUX RESSOURCES DU PROGRAMME RECONSTRUCTION (VIDÉOS, DOCUMENTS, LOGICIELS, ...) D'UNE VALEUR DE 50 000 FCFA</div>
+                      <div class="feature-item">ACCÈS AUX PROJETS COLLABORATIFS ET INTERACTIFS</div>
+                      <div class="feature-item">ACCÈS À L'INTELLIGENCE ARTIFICIELLE INTERACTIVE TUTORING BOT D'UNE VALEUR DE 100 000 FCFA</div>
+                  </div>
+              </div>
+
+              <!-- Diamond Plan -->
+              <div class="pricing-card diamond featured">
+                  <div class="pricing-header">
+                      <div class="plan-icon">
+                          <img src="images/diamond.png" alt="Diamond Plan" class="plan-image">
+                      </div>
+                      <h3>Diamond</h3>
+                      <div class="plan-currency">FCFA / €</div>
+                      <div class="plan-price">798 000 / 1599.99</div>
+                  </div>
+                  <div class="pricing-features">
+                      <div class="feature-item">ACCÈS À L'ACCOMPAGNEMENT PACK 2</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES D'ANALYSE PSYCHOLOGIQUE (RESSOURCE PREMIUM)</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES DE COACHING DE PROGRESSION INDIVIDUELLE</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES DE COACHING PARENTAL (RESSOURCE PREMIUM)</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES DE OPTIMISATION MENTALE</div>
+                      <div class="feature-item">ACCÈS AUX RESSOURCES DU PROGRAMME RECONSTRUCTION (VIDÉOS, DOCUMENTS, LOGICIELS, ...) D'UNE VALEUR DE 50 000 FCFA</div>
+                      <div class="feature-item">ACCÈS AUX PROJETS COLLABORATIFS ET INTERACTIFS</div>
+                      <div class="feature-item">ACCÈS À L'INTELLIGENCE ARTIFICIELLE INTERACTIVE TUTORING BOT D'UNE VALEUR DE 100 000 FCFA</div>
+                  </div>
+              </div>
+
+              <!-- Gold Plan -->
+              <div class="pricing-card gold">
+                  <div class="pricing-header">
+                      <div class="plan-icon">
+                          <img src="images/gold.png" alt="Gold Plan" class="plan-image">
+                      </div>
+                      <h3>Gold</h3>
+                      <div class="plan-currency">FCFA / €</div>
+                      <div class="plan-price">532 000 / 989.99</div>
+                  </div>
+                  <div class="pricing-features">
+                      <div class="feature-item">ACCÈS À L'ACCOMPAGNEMENT PACK 2</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES D'ANALYSE PSYCHOLOGIQUE (RESSOURCE PREMIUM)</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES DE COACHING DE PROGRESSION INDIVIDUELLE</div>
+                      <div class="feature-item">ACCÈS AUX SÉANCES DE OPTIMISATION MENTALE</div>
+                      <div class="feature-item">ACCÈS AUX RESSOURCES DU PROGRAMME RECONSTRUCTION (VIDÉOS, DOCUMENTS, LOGICIELS, ...) D'UNE VALEUR DE 50 000 FCFA</div>
+                      <div class="feature-item">ACCÈS AUX PROJETS COLLABORATIFS ET INTERACTIFS</div>
+                      <div class="feature-item">ACCÈS À L'INTELLIGENCE ARTIFICIELLE INTERACTIVE TUTORING BOT D'UNE VALEUR DE 100 000 FCFA</div>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="pricing-cta">
+              <p class="pricing-note">Choisissez le plan qui correspond le mieux aux besoins de votre enfant</p>
+              <a href="#cta-final" class="btn btn-primary btn-lg">Commencer la transformation maintenant</a>
+          </div>
+      </div>
+  </section>
+
     <!-- FINAL CTA -->
     <section class="section final-cta" id="cta-final">
         <div class="container-medium">
-            <h2>Un enfant transformé, c’est une famille entière qui respire mieux.</h2>
+            <h2><span>Un enfant transformé, c'est une famille entière qui respire mieux.</span></h2>
             <p>Ne laissez pas les doutes voler les chances de votre enfant. Donnez-lui les clés de sa réussite.</p>
-            <a href="#" class="btn btn-primary btn-lg">[CTA final ultime : Oui, je veux qu’il réussisse]</a>
+            <a href="https://calendly.com/olympiadescameroun/programme-reconstruction" class="btn btn-primary btn-lg" target="_blank">Oui, je veux qu'il réussisse</a>
         </div>
     </section>
 
@@ -336,7 +978,7 @@
         <div class="docs-list">
           <article class="doc-item">
             <div class="doc-meta">
-              <h4>Activités du programme</h4>
+              <h4>FEUILLE DE ROUTE DU PROGRAMME RECONSTRUCTION</h4>
               <p>Aperçu des ateliers, projets et activités clés proposés.</p>
             </div>
             <a href="documents/Activités du programme.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
@@ -344,7 +986,7 @@
 
           <article class="doc-item">
             <div class="doc-meta">
-              <h4>Calendrier</h4>
+              <h4>Calendrier de l'élève</h4>
               <p>Planning des grandes étapes et jalons du programme.</p>
             </div>
             <a href="documents/Calendrier.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
@@ -352,15 +994,15 @@
 
           <article class="doc-item">
             <div class="doc-meta">
-              <h4>Guide de la concentration (Anglais)</h4>
-              <p>Méthodes et outils pour améliorer l’attention et la concentration.</p>
+              <h4>Concentration guide</h4>
+              <p>Methods and tools to improve attention and concentration.</p>
             </div>
-            <a href="documents/Guide de la concentration (Anglais).pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
+            <a href="documents/Guide de la concentration (Anglais).pdf" class="btn btn-primary btn-sm" download>Download</a>
           </article>
 
           <article class="doc-item">
             <div class="doc-meta">
-              <h4>J’aide mon enfant à mieux s’organiser – Partie 1</h4>
+              <h4>GUIDE DES PARENTS : J’aide mon enfant à mieux s’organiser – Partie 1</h4>
               <p>Stratégies pratiques pour structurer le travail et le temps.</p>
             </div>
             <a href="documents/J’aide mon enfant à mieux s’organiser-partie 1.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
@@ -368,7 +1010,7 @@
 
           <article class="doc-item">
             <div class="doc-meta">
-              <h4>Programme Reconstruction</h4>
+              <h4>PRESENTATION DU PROGRAMME RECONSTRUCTION</h4>
               <p>Document complet présentant le contenu et les objectifs.</p>
             </div>
             <a href="documents/Programme reconstruction.pdf" class="btn btn-primary btn-sm" download>Télécharger</a>
@@ -384,14 +1026,14 @@
     <div class="container footer-grid">
       <div>
         <div class="brand mini">
-          <img src="images/logo.png" alt="Logo Olympiades Cameroun" class="logo-img">
-          <span class="brand-name">Programme Reconstruction</span>
+          <img src="photos/logo_ta_white.png" alt="Logo Tutoring Academia" class="logo-img">
         </div>
         <p class="muted"> 2025. Tous droits réservés.</p>
       </div>
       <div>
         <h5>Contact</h5>
-        <p class="muted">Email: contact@exemple.com</p>
+        <p class="muted">Email: Tutoringacademia2022@gmail.com</p>
+        <p class="muted">tel: (+237) 695 443 977 - 679 936 567</p>
       </div>
       <div>
         <h5>Navigation</h5>
@@ -406,6 +1048,6 @@
   <!-- GSAP Animations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+  <script src="reconstruction.js"></script>
 </body>
 </html>
