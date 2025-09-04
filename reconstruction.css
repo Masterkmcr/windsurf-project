@@ -1298,7 +1298,7 @@ p {
 .site-footer {
   background: var(--text-primary);
   color: white;
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 2rem;
   border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   margin-top: 2rem;
 }
@@ -3395,4 +3395,204 @@ body::after {
     padding: 0.75rem 1.25rem;
     font-size: 0.9rem;
   }
+}
+
+@media (max-width: 480px) {
+    /* Containers centrés avec padding uniforme */
+    .container,
+    .container-medium,
+    .container-large {
+      padding: 0.75rem;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    /* Header mobile centré */
+    .site-header .container {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+      padding: 1rem 0.75rem;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .brand {
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .logo-img {
+      height: 100px;
+      width: 200px;
+      margin: 0 auto;
+    }
+    
+    /* Sections centrées */
+    .section {
+      padding: 3rem 0;
+      margin: 0.5rem 0;
+    }
+    
+    .section-intro {
+      text-align: center;
+      padding: 0 0.75rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Hero mobile centré */
+    .hero-reconstruction {
+      padding-top: 120px;
+      text-align: center;
+    }
+    
+    .hero-content {
+      text-align: center;
+      padding: 0 0.75rem;
+    }
+    
+    .hero-content .tagline {
+      font-size: 2rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    .hero-badges {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    
+    .sub-headline {
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+    
+    /* Cards et grilles centrées */
+    .three-cards,
+    .two-cols,
+    .two-cols-compare,
+    .testimonials {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 0 0.75rem;
+    }
+    
+    .card,
+    .testimonial-card {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    
+    .card-content, 
+    .enhanced-cta {
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+    
+    /* CTA buttons centrés */
+    .cta-buttons-group {
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .cta-buttons-group .btn {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    /* Garanties centrées */
+    .guarantee-box {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    
+    /* Modal mobile centrée */
+    .modal .modal-content {
+      width: 95%;
+      padding: 1.5rem 1rem;
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    /* Bonus mobile centrés */
+    .bonus-card {
+      padding: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    .bonus-grid-new,
+    .bonus-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 0 0.75rem;
+    }
+    
+    /* Transformation container mobile */
+    .transformation-container {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      padding: 0 0.75rem;
+    }
+    
+    .avant-section, 
+    .apres-section {
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+    
+    .point-item {
+      padding: 0.75rem;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    
+    /* Float badges ajustés */
+    .float-badge {
+      font-size: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      position: relative;
+      margin: 0.25rem;
+    }
+    
+    /* Documents list mobile */
+    .doc-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .doc-item .btn-sm {
+      width: 100%;
+      max-width: 200px;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    
+    /* Navigation mobile cachée */
+    .site-header .nav {
+      display: none;
+    }
+    
+    /* Textes centrés */
+    .section-intro h2,
+    .section h2,
+    .section h3 {
+      text-align: center;
+    }
+    
+    /* Espacement uniforme */
+    .section .container,
+    .section .container-medium {
+      padding: 2rem 0.75rem;
+      margin: 0.5rem auto;
+    }
 }
